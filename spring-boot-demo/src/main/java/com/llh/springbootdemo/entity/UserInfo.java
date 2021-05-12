@@ -1,18 +1,25 @@
 package com.llh.springbootdemo.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.time.LocalDateTime;
 
+/**
+ * @author llh
+ */
 public class UserInfo {
-    private Integer id;
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
     private String username;
     private String password;
     private LocalDateTime createTime;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
