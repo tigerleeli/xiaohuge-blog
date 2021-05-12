@@ -1,5 +1,6 @@
-package com.llh.springbootdemo1.controller;
+package com.llh.springbootdemo.controller;
 
+import com.llh.springbootdemo.entity.UserInfo;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
