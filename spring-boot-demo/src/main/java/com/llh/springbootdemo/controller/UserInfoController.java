@@ -5,7 +5,6 @@ import com.llh.springbootdemo.service.UserInfoService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -19,7 +18,6 @@ public class UserInfoController {
 
     @PostMapping("/add")
     public Boolean add(@RequestBody UserInfo userInfo) {
-        userInfo.setCreateTime(LocalDateTime.now());
         return userInfoService.save(userInfo);
     }
 
