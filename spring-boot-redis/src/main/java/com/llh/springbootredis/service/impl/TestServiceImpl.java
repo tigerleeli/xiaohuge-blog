@@ -23,6 +23,13 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public String test0(Long id) {
+        // 模拟延迟操作
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         System.out.println("产生一个新字符串");
         UUID uuid = UUID.randomUUID();
         String str = uuid.toString();
@@ -35,6 +42,13 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public UserInfo test1(Long id) {
+        // 模拟延迟操作
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         System.out.println("产生一个新对象");
         UserInfo userInfo = new UserInfo(id, "admin", "123456");
 
