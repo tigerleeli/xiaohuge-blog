@@ -10,9 +10,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.llh</groupId>
-    <artifactId>spring-boot-demo</artifactId>
+    <artifactId>spring-boot-jwt</artifactId>
     <version>1.0.0</version>
-    <name>spring-boot-demo</name>
+    <name>spring-boot-jwt</name>
     <description>springboot project description</description>
 
     <properties>
