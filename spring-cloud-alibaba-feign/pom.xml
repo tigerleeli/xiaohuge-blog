@@ -12,6 +12,7 @@
     <modules>
         <module>parent</module>
         <module>consumer</module>
-        <module>consumer-api</module>
+        <module>product</module>
+        <module>product-api</module>
     </modules>
 </project>
