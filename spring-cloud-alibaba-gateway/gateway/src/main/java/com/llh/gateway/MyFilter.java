@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 /**
  * @author 小虎哥的技术博客
  */
-//@Component
+@Component
 public class MyFilter implements WebFilter{
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
