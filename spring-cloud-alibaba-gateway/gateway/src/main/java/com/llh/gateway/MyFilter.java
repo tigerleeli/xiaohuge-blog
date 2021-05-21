@@ -17,6 +17,7 @@ public class MyFilter implements WebFilter{
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
         String path = request.getPath().toString();
+        // 打印请求路径，生产环境可以在此做一些权限认证等
         System.out.println(path);
         return  chain.filter(exchange);
 
