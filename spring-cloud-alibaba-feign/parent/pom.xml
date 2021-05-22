@@ -14,6 +14,8 @@
     <version>1.0.0</version>
     <name>parent</name>
     <description>parent description</description>
+    <packaging>pom</packaging>
+
 
     <properties>
         <spring-cloud.version>2020.0.2</spring-cloud.version>
