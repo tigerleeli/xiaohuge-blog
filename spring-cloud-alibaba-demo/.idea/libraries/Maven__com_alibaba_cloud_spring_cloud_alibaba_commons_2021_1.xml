@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.alibaba.cloud:spring-cloud-alibaba-commons:2021.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../tools/apache-maven-3.6.3/resp/com/alibaba/cloud/spring-cloud-alibaba-commons/2021.1/spring-cloud-alibaba-commons-2021.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../tools/apache-maven-3.6.3/resp/com/alibaba/cloud/spring-cloud-alibaba-commons/2021.1/spring-cloud-alibaba-commons-2021.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../tools/apache-maven-3.6.3/resp/com/alibaba/cloud/spring-cloud-alibaba-commons/2021.1/spring-cloud-alibaba-commons-2021.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
