@@ -13,7 +13,7 @@ CREATE TABLE `product_order`
     `id`          bigint(20) NOT NULL COMMENT '主键id',
     `product_id`  bigint(20) NOT NULL COMMENT '商品id',
     `number`      int(11)    NOT NULL COMMENT '数量',
-    `create_time` datetime   NOT NULL COMMENT '创建数量',
+    `create_time` datetime   NOT NULL COMMENT '创建时间',
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
