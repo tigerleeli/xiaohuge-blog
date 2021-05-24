@@ -22,6 +22,7 @@
         <mybatis.version>2.1.4</mybatis.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
         <redisson.version>3.14.0</redisson.version>
+        <hutool.version>5.6.5</hutool.version>
     </properties>
 
     <dependencyManagement>
@@ -55,6 +56,11 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

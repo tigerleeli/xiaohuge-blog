@@ -15,7 +15,7 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     public Boolean decrease(Long productId, Integer number) {
         Product product = getById(productId);
         // 判断商品数量够不够
-        if ((product.getNumber() - number) > 0) {
+        if ((product.getNumber() - number) >= 0) {
             // 商品数量减少
             product.setNumber(product.getNumber() - number);
             return updateById(product);

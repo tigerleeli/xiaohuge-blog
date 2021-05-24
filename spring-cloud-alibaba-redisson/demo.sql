@@ -8,7 +8,7 @@ CREATE TABLE `product`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_general_ci;
 
-CREATE TABLE `order`
+CREATE TABLE `product_order`
 (
     `id`          bigint(20) NOT NULL COMMENT '主键id',
     `product_id`  bigint(20) NOT NULL COMMENT '商品id',

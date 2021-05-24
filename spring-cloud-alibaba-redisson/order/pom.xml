@@ -7,20 +7,13 @@
         <version>1.0.0</version>
         <relativePath/>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>consumer</artifactId>
+    <artifactId>order</artifactId>
     <version>1.0.0</version>
-    <name>consumer</name>
-    <description>consumer description</description>
+    <name>order</name>
+    <description>order description</description>
 
     <dependencies>
-        <dependency>
-            <groupId>com.llh</groupId>
-            <artifactId>product-api</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
         <dependency>
             <groupId>com.llh</groupId>
             <artifactId>order-api</artifactId>
@@ -43,14 +36,24 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-loadbalancer</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.redisson</groupId>
-            <artifactId>redisson-spring-boot-starter</artifactId>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
     </dependencies>
+
 </project>

@@ -14,5 +14,7 @@
         <module>consumer</module>
         <module>product</module>
         <module>product-api</module>
+        <module>order</module>
+        <module>order-api</module>
     </modules>
 </project>
