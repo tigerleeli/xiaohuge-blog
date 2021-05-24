@@ -20,6 +20,7 @@ public class ProductController {
 
     @GetMapping("/decrease/{productId}/{number}")
     public Boolean decrease(@PathVariable Long productId, @PathVariable Integer number) {
+        System.out.println("/product/decrease/" + productId + "/" + number);
         return productService.decrease(productId, number);
     }
 }

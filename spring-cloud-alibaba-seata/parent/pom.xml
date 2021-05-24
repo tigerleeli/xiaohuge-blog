@@ -21,6 +21,7 @@
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <mybatis.version>2.1.4</mybatis.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
+        <redisson.version>3.14.0</redisson.version>
         <hutool.version>5.6.5</hutool.version>
     </properties>
 
@@ -49,6 +50,12 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.hutool</groupId>

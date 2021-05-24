@@ -12,7 +12,7 @@ import javax.annotation.Resource;
  * @author 小虎哥的技术博客
  */
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/order")
 public class OrderController {
 
     @Resource
@@ -20,6 +20,7 @@ public class OrderController {
 
     @GetMapping("/create/{productId}/{number}")
     public Boolean create(@PathVariable Long productId, @PathVariable Integer number) {
+        System.out.println("/order/create/" + productId + "/" + number);
         return orderService.create(productId, number);
     }
 }

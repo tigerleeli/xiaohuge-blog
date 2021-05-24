@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 /**
  * @author 小虎哥的技术博客
  */
-public class Order {
+public class ProductOrder {
     private Long id;
     private Long productId;
     private Integer number;

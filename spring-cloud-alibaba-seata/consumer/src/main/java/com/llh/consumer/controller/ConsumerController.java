@@ -19,6 +19,7 @@ public class ConsumerController {
 
     @GetMapping("/buy/{productId}/{number}")
     public Boolean buy(@PathVariable Long productId, @PathVariable Integer number) {
+        System.out.println("/consumer/buy/" + productId + "/" + number);
         return consumerService.buy(productId, number);
     }
 }

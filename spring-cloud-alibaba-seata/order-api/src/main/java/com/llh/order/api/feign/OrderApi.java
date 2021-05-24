@@ -16,6 +16,6 @@ public interface OrderApi {
      * @param number    数量
      * @return 是否成功
      */
-    @GetMapping("/product/create/{productId}/{number}")
+    @GetMapping("/order/create/{productId}/{number}")
     Boolean create(@PathVariable Long productId, @PathVariable Integer number);
 }

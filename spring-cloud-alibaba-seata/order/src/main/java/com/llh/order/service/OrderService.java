@@ -1,12 +1,12 @@
 package com.llh.order.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.llh.order.api.entity.Order;
+import com.llh.order.api.entity.ProductOrder;
 
 /**
  * @author 小虎哥的技术博客
  */
-public interface OrderService extends IService<Order> {
+public interface OrderService extends IService<ProductOrder> {
     /**
      * 创建订单
      *
