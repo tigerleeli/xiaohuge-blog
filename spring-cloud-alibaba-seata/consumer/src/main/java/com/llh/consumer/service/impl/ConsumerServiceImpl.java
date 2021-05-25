@@ -3,6 +3,7 @@ package com.llh.consumer.service.impl;
 import com.llh.consumer.service.ConsumerService;
 import com.llh.order.api.feign.OrderApi;
 import com.llh.product.api.feign.ProductApi;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,7 @@ public class ConsumerServiceImpl implements ConsumerService {
     private OrderApi orderApi;
 
     @Override
+    @GlobalTransactional
     public Boolean buy(Long productId, Integer number) {
         RLock lock = redissonClient.getLock("lock_key");
         // 加锁
