@@ -27,6 +27,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, ProductOrder> imp
         productOrder.setProductId(productId);
         productOrder.setNumber(number);
         productOrder.setCreateTime(LocalDateTime.now());
+        int i = 1 / 0;
         return save(productOrder);
     }
 }
