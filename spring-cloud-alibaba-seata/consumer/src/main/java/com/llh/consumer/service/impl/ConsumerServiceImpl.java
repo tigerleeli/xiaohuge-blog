@@ -31,15 +31,24 @@ public class ConsumerServiceImpl implements ConsumerService {
         RLock lock = redissonClient.getLock("lock_key");
         // 加锁
         lock.lock();
-        // 先减商品库存
-        boolean decreaseResult = productApi.decrease(productId, number);
-        if (decreaseResult) {
-            // 商品库存减成功后 创建订单
-            boolean createResult = orderApi.create(productId, number);
-            // 解锁
+
+        try {
+            // 先减商品库存
+            boolean decreaseResult = productApi.decrease(productId, number);
+            if (decreaseResult) {
+                // 商品库存减成功后 创建订单
+                boolean createResult = orderApi.create(productId, number);
+                // 释放锁
+                lock.unlock();
+                return createResult;
+            }
+        } catch (Exception e) {
+            // 捕获异常，释放锁，否则会阻塞线程导致后续请求无法进入
             lock.unlock();
-            return createResult;
+            // 再次抛出异常，如果不抛出，事务就无法回滚
+            throw e;
         }
+
         return false;
     }
 }
