@@ -9,10 +9,10 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>consumer</artifactId>
+    <artifactId>provider</artifactId>
     <version>1.0.0</version>
-    <name>consumer</name>
-    <description>consumer description</description>
+    <name>provider</name>
+    <description>provider description</description>
 
     <dependencies>
         <dependency>
