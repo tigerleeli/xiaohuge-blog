@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.util.Objects;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author llh
@@ -28,9 +31,13 @@ public class TestController {
     @PostMapping("upload")
     public String upload(@RequestParam(name = "file", required = false) MultipartFile multipartFile) {
         try {
+            int index = Objects.requireNonNull(multipartFile.getOriginalFilename()).lastIndexOf(".");
+            String suffix = multipartFile.getOriginalFilename().substring(index);
+            String path = UUID.randomUUID().toString() + suffix;
+
             minioClient.putObject(PutObjectArgs.builder()
                     .stream(multipartFile.getInputStream(), multipartFile.getSize(), PutObjectArgs.MIN_MULTIPART_SIZE)
-                    .object(multipartFile.getOriginalFilename())
+                    .object(path)
                     .contentType(multipartFile.getContentType())
                     .bucket(minioProperties.getBucket())
                     .build());
@@ -39,8 +46,8 @@ public class TestController {
 //                    .object(multipartFile.getOriginalFilename()).build());
 
             String url = minioClient.getPresignedObjectUrl(GetPresignedObjectUrlArgs.builder()
-                    .bucket(minioProperties.getBucket()).object(multipartFile.getOriginalFilename()).
-                            method(Method.GET).expiry().build());
+                    .bucket(minioProperties.getBucket()).object(path).
+                            method(Method.GET).expiry(7, TimeUnit.DAYS).build());
             log.info(url);
             return url;
         } catch (Exception e) {
