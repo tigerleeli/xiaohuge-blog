@@ -33,7 +33,7 @@ public class TestController {
         try {
             int index = Objects.requireNonNull(multipartFile.getOriginalFilename()).lastIndexOf(".");
             String suffix = multipartFile.getOriginalFilename().substring(index);
-            String path = UUID.randomUUID().toString() + suffix;
+            String path = "1/" + UUID.randomUUID().toString() + suffix;
 
             minioClient.putObject(PutObjectArgs.builder()
                     .stream(multipartFile.getInputStream(), multipartFile.getSize(), PutObjectArgs.MIN_MULTIPART_SIZE)
