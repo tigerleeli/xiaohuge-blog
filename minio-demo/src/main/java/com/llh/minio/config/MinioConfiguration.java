@@ -9,13 +9,13 @@ import org.springframework.context.annotation.Configuration;
 @RequiredArgsConstructor
 public class MinioConfiguration {
 
-    private final MinioProperties minioData;
+    private final MinioProperties minioProperties;
 
     @Bean
     public MinioClient minioClient() {
         return new MinioClient.Builder()
-                .endpoint(minioData.getEndpoint())
-                .credentials(minioData.getAccessKey(), minioData.getSecretKey())
+                .endpoint(minioProperties.getEndpoint())
+                .credentials(minioProperties.getAccessKey(), minioProperties.getSecretKey())
                 .build();
     }
 }
