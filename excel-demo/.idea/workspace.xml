@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a7d0984-1be2-4e1f-88f7-14bf5cfff1e2" name="Default Changelist" comment="上传excel和导出excel">
+    <list default="true" id="7a7d0984-1be2-4e1f-88f7-14bf5cfff1e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/llh/excel/controller/DemoDataListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/llh/excel/controller/DemoDataListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/llh/excel/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/llh/excel/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/llh/excel/bean/DemoData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/llh/excel/bean/DemoData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/llh/excel/controller/DemoDataListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/llh/excel/controller/DemoDataListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/llh/excel/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/llh/excel/controller/TestController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +78,7 @@
       <updated>1626230020576</updated>
       <workItem from="1626230024953" duration="3949000" />
       <workItem from="1626233986557" duration="108000" />
-      <workItem from="1626234327915" duration="1464000" />
+      <workItem from="1626234327915" duration="2813000" />
     </task>
     <task id="LOCAL-00001" summary="上传excel和导出excel">
       <created>1626233239033</created>
@@ -99,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626234817469</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="导入异常捕获">
+      <created>1626243939721</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626243939721</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,17 +109,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="上传excel和导出excel" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传excel和导出excel" />
+    <MESSAGE value="导入异常捕获" />
+    <option name="LAST_COMMIT_MESSAGE" value="导入异常捕获" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2703" y="191" key="#com.intellij.ide.util.MemberChooser" timestamp="1626243578431">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="2703" y="191" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.2048.1112@1920.0.2048.1112" timestamp="1626243578431" />
-    <state x="2432" y="38" key="CommitChangelistDialog2" timestamp="1626234816411">
+    <state x="2432" y="38" key="CommitChangelistDialog2" timestamp="1626243939068">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
-    <state x="2432" y="38" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.2048.1112@1920.0.2048.1112" timestamp="1626234816411" />
+    <state x="2432" y="38" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.2048.1112@1920.0.2048.1112" timestamp="1626243939068" />
     <state x="2672" y="188" key="FileChooserDialogImpl" timestamp="1626234082971">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
@@ -174,10 +177,10 @@
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="2314" y="51" key="SettingsEditor/0.0.1920.1040/1920.0.2048.1112@1920.0.2048.1112" timestamp="1626234083931" />
-    <state x="2437" y="223" key="Vcs.Push.Dialog.v2" timestamp="1626234820267">
+    <state x="2437" y="223" key="Vcs.Push.Dialog.v2" timestamp="1626243940985">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
-    <state x="2437" y="223" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.2048.1112@1920.0.2048.1112" timestamp="1626234820267" />
+    <state x="2437" y="223" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.2048.1112@1920.0.2048.1112" timestamp="1626243940985" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
