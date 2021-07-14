@@ -10,7 +10,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -30,8 +29,12 @@ public class TestController {
         try {
             InputStream inputStream = multipartFile.getInputStream();
             // 读excel
-            EasyExcel.read(inputStream, DemoData.class, new DemoDataListener())
-                    .headRowNumber(1).sheet().doRead();
+            EasyExcel.read(inputStream, DemoData.class, new DemoDataListener(new DemoDataListener.Callback() {
+                @Override
+                public void onError(int errorRow, int errorColumn) {
+                    log.info("导入失败，{}，{}",errorRow, errorColumn);
+                }
+            })).headRowNumber(1).sheet().doRead();
 
             // 写excel
             File tempDir = new File(TEMP_DIR);
@@ -51,7 +54,7 @@ public class TestController {
             response.setCharacterEncoding("utf-8");
             response.setHeader("Content-disposition", "attachment;filename=" + fileName + ".xlsx");
             EasyExcel.write(response.getOutputStream(), DemoData.class).sheet("sheet1").doWrite(dataList);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
