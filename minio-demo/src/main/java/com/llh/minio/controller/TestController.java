@@ -1,6 +1,7 @@
 package com.llh.minio.controller;
 
 import cn.hutool.core.img.ImgUtil;
+import cn.hutool.core.io.FileTypeUtil;
 import cn.hutool.core.thread.ThreadUtil;
 import com.llh.minio.config.MinioProperties;
 import io.minio.GetPresignedObjectUrlArgs;
@@ -40,7 +41,8 @@ public class TestController {
             String suffix = multipartFile.getOriginalFilename().substring(index + 1);
             String fileName = UUID.randomUUID().toString() + "." + suffix;
             String path = "1/" + fileName;
-            if (suffix.equalsIgnoreCase(ImgUtil.IMAGE_TYPE_JPG) || suffix.equalsIgnoreCase(ImgUtil.IMAGE_TYPE_JPEG) || suffix.equalsIgnoreCase(ImgUtil.IMAGE_TYPE_PNG)) {
+            String fileType = FileTypeUtil.getType(multipartFile.getInputStream());
+            if (fileType.equalsIgnoreCase(ImgUtil.IMAGE_TYPE_JPG) || fileType.equalsIgnoreCase(ImgUtil.IMAGE_TYPE_JPEG) || fileType.equalsIgnoreCase(ImgUtil.IMAGE_TYPE_PNG)) {
                 ThreadUtil.execAsync(() -> {
                     try {
 
@@ -92,7 +94,7 @@ public class TestController {
             log.info("保存文件 花费时间：{}毫秒", endMilli - startMilli);
             String url = minioClient.getPresignedObjectUrl(GetPresignedObjectUrlArgs.builder()
                     .bucket(minioProperties.getBucket()).object(path).
-                            method(Method.GET).expiry(7, TimeUnit.DAYS).build());
+                    method(Method.GET).expiry(7, TimeUnit.DAYS).build());
             log.info(url);
             return url;
         } catch (Exception e) {
