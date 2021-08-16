@@ -3,6 +3,9 @@ package com.llh.minio.controller;
 import cn.hutool.core.img.ImgUtil;
 import cn.hutool.core.io.FileTypeUtil;
 import cn.hutool.core.thread.ThreadUtil;
+import cn.hutool.extra.tokenizer.TokenizerEngine;
+import cn.hutool.extra.tokenizer.engine.hanlp.HanLPEngine;
+import cn.hutool.system.SystemUtil;
 import com.llh.minio.config.MinioProperties;
 import io.minio.GetPresignedObjectUrlArgs;
 import io.minio.MinioClient;
@@ -37,6 +40,8 @@ public class TestController {
     @PostMapping("upload")
     public String upload(@RequestParam(name = "file", required = false) MultipartFile multipartFile) {
         try {
+            TokenizerEngine engine = new HanLPEngine();
+
             int index = Objects.requireNonNull(multipartFile.getOriginalFilename()).lastIndexOf(".");
             String suffix = multipartFile.getOriginalFilename().substring(index + 1);
             String fileName = UUID.randomUUID().toString() + "." + suffix;
