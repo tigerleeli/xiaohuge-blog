@@ -76,10 +76,10 @@ CREATE TABLE `product_order`
 </project>
 ```
 **4.2 右击项目，创建模块**
-![image](9115759A25034152BA761211F3CD38BF)
+
 
 **4.3 创建模块后，在根目录下的`pom.xml`中添加模块名称**
-![image](673ADBF343E74843BC407251B45FC100)
+
 
 ### 五、创建`parent`模块
 `parent`模块做所有Jar包依赖的版本号管理，其它所有模块都依赖`parent`模块。    
