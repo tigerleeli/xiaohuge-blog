@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.llh</groupId>
-    <artifactId>sharding-jdbc</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>sharding-jdbc</name>
+    <artifactId>spring-boot-sharding-jdbc</artifactId>
+    <version>1.0.0</version>
+    <name>spring-boot-sharding-jdbc</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
