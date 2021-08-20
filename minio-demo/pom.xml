@@ -41,11 +41,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>5.7.4</version>
-        </dependency>
     </dependencies>
 
 </project>

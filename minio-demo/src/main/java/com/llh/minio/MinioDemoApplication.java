@@ -17,6 +17,7 @@ public class MinioDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(MinioDemoApplication.class, args);
     }
+
     @Bean
     public MultipartConfigElement multipartConfigElement() {
         MultipartConfigFactory factory = new MultipartConfigFactory();

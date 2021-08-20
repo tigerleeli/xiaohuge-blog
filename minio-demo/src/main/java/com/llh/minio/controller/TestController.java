@@ -1,104 +1,58 @@
 package com.llh.minio.controller;
 
-import cn.hutool.core.img.ImgUtil;
-import cn.hutool.core.io.FileTypeUtil;
-import cn.hutool.core.thread.ThreadUtil;
-import cn.hutool.extra.tokenizer.TokenizerEngine;
-import cn.hutool.extra.tokenizer.engine.hanlp.HanLPEngine;
-import cn.hutool.system.SystemUtil;
-import com.llh.minio.config.MinioProperties;
 import io.minio.GetPresignedObjectUrlArgs;
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
 import io.minio.http.Method;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
-import java.io.*;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author llh
- */
 @RestController
-@Slf4j
 public class TestController {
     @Resource
     private MinioClient minioClient;
 
-    @Resource
-    private MinioProperties minioProperties;
-
-    private static final String TEMP_DIR = "temp/";
+    // 和后台桶名对应
+    private static final String TEST_BUCKET = "test";
 
     @PostMapping("upload")
-    public String upload(@RequestParam(name = "file", required = false) MultipartFile multipartFile) {
+    public Boolean upload(@RequestParam(name = "file") MultipartFile file) {
         try {
-            int index = Objects.requireNonNull(multipartFile.getOriginalFilename()).lastIndexOf(".");
-            String suffix = multipartFile.getOriginalFilename().substring(index + 1);
-            String fileName = UUID.randomUUID().toString() + "." + suffix;
-            String path = "1/" + fileName;
-            String fileType = FileTypeUtil.getType(multipartFile.getInputStream());
-            if (fileType.equalsIgnoreCase(ImgUtil.IMAGE_TYPE_JPG) || fileType.equalsIgnoreCase(ImgUtil.IMAGE_TYPE_JPEG) || fileType.equalsIgnoreCase(ImgUtil.IMAGE_TYPE_PNG)) {
-                ThreadUtil.execAsync(() -> {
-                    try {
+            int idx = Objects.requireNonNull(file.getOriginalFilename()).lastIndexOf(".");
+            String suffix = file.getOriginalFilename().substring(idx + 1);
+            String fileName = UUID.randomUUID() + "." + suffix;
 
-                        log.info("异步生成缩略图");
-                        long startMilli = System.currentTimeMillis();
-                        File tempFile = new File(TEMP_DIR + fileName);
-                        File tempDir = new File(TEMP_DIR);
-                        if (!tempDir.exists()) {
-                            boolean res = tempDir.mkdir();
-                            log.info("创建临时文件目录");
-                        }
-                        log.info("创建临时文件");
-                        OutputStream tempOutStream = new FileOutputStream(tempFile);
-                        ImgUtil.scale(multipartFile.getInputStream(), tempOutStream, 0.2f);
-                        tempOutStream.close();
-
-                        InputStream tempInputStream = new FileInputStream(tempFile);
-                        String small = "1/small" + fileName;
-                        minioClient.putObject(PutObjectArgs.builder()
-                                .stream(tempInputStream, tempFile.length(), PutObjectArgs.MIN_MULTIPART_SIZE)
-                                .object(small)
-                                .contentType(multipartFile.getContentType())
-                                .bucket(minioProperties.getBucket())
-                                .build());
-                        tempInputStream.close();
-                        if (tempFile.exists() && tempFile.isFile()) {
-                            boolean res = tempFile.delete();
-                            log.info("删除临时文件 {}", res);
-                        }
-                        long endMilli = System.currentTimeMillis();
-                        log.info("保存缩略图 花费时间：{}毫秒", endMilli - startMilli);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                });
-            }
-
-            long startMilli = System.currentTimeMillis();
+            // 保存文件
             minioClient.putObject(PutObjectArgs.builder()
-                    .stream(multipartFile.getInputStream(), multipartFile.getSize(), PutObjectArgs.MIN_MULTIPART_SIZE)
-                    .object(path)
-                    .contentType(multipartFile.getContentType())
-                    .bucket(minioProperties.getBucket())
+                    .stream(file.getInputStream(), file.getSize(), PutObjectArgs.MIN_MULTIPART_SIZE)
+                    .object(fileName)
+                    .contentType(file.getContentType())
+                    .bucket(TEST_BUCKET)
                     .build());
-//            InputStream inputStream = minioClient.getObject(GetObjectArgs.builder()
-//                    .bucket(minioProperties.getBucket())
-//                    .object(multipartFile.getOriginalFilename()).build());
-            long endMilli = System.currentTimeMillis();
-            log.info("保存文件 花费时间：{}毫秒", endMilli - startMilli);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @GetMapping("getUrl")
+    public String getUrl(@RequestParam(name = "path") String path) {
+        try {
+            // 获取文件访问地址 7天失效
             String url = minioClient.getPresignedObjectUrl(GetPresignedObjectUrlArgs.builder()
-                    .bucket(minioProperties.getBucket()).object(path).
-                    method(Method.GET).expiry(7, TimeUnit.DAYS).build());
-            log.info(url);
+                    .bucket(TEST_BUCKET)
+                    .object(path).
+                    method(Method.GET)
+                    .expiry(7, TimeUnit.DAYS).build());
             return url;
         } catch (Exception e) {
             e.printStackTrace();
