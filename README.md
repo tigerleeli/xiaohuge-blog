@@ -1,3 +1,5 @@
+赠人`star`，手留余香！
+
 **目录 Spring Cloud Alibaba 微服务系列文章**
 - [0、Spring Cloud Alibaba微服务系列-准备工作](https://github.com/tigerleeli/xiaohuge-blog)
 - [1、Spring Cloud Alibaba微服务系列-服务注册中心Nacos](https://github.com/tigerleeli/xiaohuge-blog/tree/master/spring-cloud-alibaba-registry)
