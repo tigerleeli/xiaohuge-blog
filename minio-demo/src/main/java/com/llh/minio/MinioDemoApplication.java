@@ -8,6 +8,9 @@ import org.springframework.util.unit.DataSize;
 
 import javax.servlet.MultipartConfigElement;
 
+/**
+ * @author 小虎哥的技术博客
+ */
 @SpringBootApplication
 public class MinioDemoApplication {
 

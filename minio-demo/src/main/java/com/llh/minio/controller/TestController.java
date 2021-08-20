@@ -40,8 +40,6 @@ public class TestController {
     @PostMapping("upload")
     public String upload(@RequestParam(name = "file", required = false) MultipartFile multipartFile) {
         try {
-            TokenizerEngine engine = new HanLPEngine();
-
             int index = Objects.requireNonNull(multipartFile.getOriginalFilename()).lastIndexOf(".");
             String suffix = multipartFile.getOriginalFilename().substring(index + 1);
             String fileName = UUID.randomUUID().toString() + "." + suffix;
