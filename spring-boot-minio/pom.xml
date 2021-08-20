@@ -10,10 +10,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.llh.minio</groupId>
-    <artifactId>minio-demo</artifactId>
+    <artifactId>spring-boot-minio</artifactId>
     <version>1.0.0</version>
-    <name>minio-demo</name>
-    <description>minio-demo</description>
+    <name>spring-boot-minio</name>
+    <description>spring-boot-minio</description>
 
     <properties>
         <java.version>1.8</java.version>

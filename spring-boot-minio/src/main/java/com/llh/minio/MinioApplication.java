@@ -12,10 +12,10 @@ import javax.servlet.MultipartConfigElement;
  * @author 小虎哥的技术博客
  */
 @SpringBootApplication
-public class MinioDemoApplication {
+public class MinioApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MinioDemoApplication.class, args);
+        SpringApplication.run(MinioApplication.class, args);
     }
 
     @Bean
