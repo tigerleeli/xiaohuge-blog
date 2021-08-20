@@ -24,7 +24,7 @@ public class TestController {
     private static final String TEST_BUCKET = "test";
 
     @PostMapping("upload")
-    public Boolean upload(@RequestParam(name = "file") MultipartFile file) {
+    public String upload(@RequestParam(name = "file") MultipartFile file) {
         try {
             int idx = Objects.requireNonNull(file.getOriginalFilename()).lastIndexOf(".");
             String suffix = file.getOriginalFilename().substring(idx + 1);
@@ -37,10 +37,10 @@ public class TestController {
                     .contentType(file.getContentType())
                     .bucket(TEST_BUCKET)
                     .build());
-            return true;
+            return fileName;
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
+            return "";
         }
     }
 
