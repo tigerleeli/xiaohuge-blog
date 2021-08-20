@@ -259,6 +259,7 @@ location / {
 ### 七、结语
 有不懂的地方可以在评论区留言，我们一起进步！
 
-源码地址：[https://github.com/tigerleeli/xiaohuge-blog/tree/master/minio-demo](https://github.com/tigerleeli/xiaohuge-blog/tree/master/minio-demo)
+源码地址：[https://github.com/tigerleeli/xiaohuge-blog/tree/master/spring-boot-minio](https://github.com/tigerleeli/xiaohuge-blog/tree/master/spring-boot-minio)
 
 同步微信公众号(还没正式运营)：小虎哥的技术博客
+
