@@ -1,5 +1,6 @@
 package com.llh.xxl.job.job;
 
+import com.xxl.job.core.context.XxlJobHelper;
 import com.xxl.job.core.handler.annotation.XxlJob;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -24,5 +25,28 @@ public class SampleXxlJob {
             // 有关数据库等操作一定要延迟，否则数据库连接资源会瞬间被占满
             TimeUnit.SECONDS.sleep(1);
         }
+    }
+
+    /**
+     * 2、分片广播任务
+     */
+    @XxlJob("shardingJobHandler")
+    public void shardingJobHandler() throws Exception {
+
+        // 分片参数
+        int shardIndex = XxlJobHelper.getShardIndex();
+        int shardTotal = XxlJobHelper.getShardTotal();
+
+        log.info("分片参数：当前分片序号 = {}, 总分片数 = {}", shardIndex, shardTotal);
+
+        // 业务逻辑
+        for (int i = 0; i < shardTotal; i++) {
+            if (i == shardIndex) {
+                log.info("第 {} 片, 命中分片开始处理", i);
+            } else {
+                log.info("第 {} 片, 忽略", i);
+            }
+        }
+
     }
 }
