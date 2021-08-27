@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 import java.io.IOException;
@@ -19,22 +18,16 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * 配置
- *
- * @author llh
- * @date 2021-03-23 下午8:17
- **/
+ * Long在前端容易丢失精度，所以转换为String
+ * 时间也统一转换为字符串
+ * <p>
+ * Long<->String
+ * LocalDateTime<->yyyy-MM-dd HH:mm:ss
+ * LocalDate<->yyyy-MM-dd
+ */
 @Configuration
 public class WebMvcConfiguration extends WebMvcConfigurationSupport {
-    /**
-     * 序列化配置
-     * Long -> String
-     * LocalDateTime -> yyyy-MM-dd HH:mm:ss
-     * LocalDate -> yyyy-MM-dd
-     *
-     * @author llh
-     * @since 2021/3/22 下午11:06
-     */
+
     @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
         MappingJackson2HttpMessageConverter jackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter();
@@ -53,12 +46,6 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         converters.add(0, jackson2HttpMessageConverter);
     }
 
-    /**
-     * localDateTime序列化
-     *
-     * @author llh
-     * @since 2020/12/16 12:54
-     */
     public static class LocalDateTimeSerializer extends JsonSerializer<LocalDateTime> {
         @Override
         public void serialize(LocalDateTime localDateTime, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
@@ -69,12 +56,6 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         }
     }
 
-    /**
-     * localDateTime反序列化
-     *
-     * @author llh
-     * @since 2020/12/16 12:54
-     */
     public static class LocalDateTimeDeserializer extends JsonDeserializer<LocalDateTime> {
         @Override
         public LocalDateTime deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
@@ -82,12 +63,6 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         }
     }
 
-    /**
-     * localDate序列化
-     *
-     * @author llh
-     * @since 2020/12/16 12:54
-     */
     public static class LocalDateSerializer extends JsonSerializer<LocalDate> {
         @Override
         public void serialize(LocalDate localDate, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
@@ -98,12 +73,6 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         }
     }
 
-    /**
-     * localDate反序列化
-     *
-     * @author llh
-     * @since 2020/12/16 12:54
-     */
     public static class LocalDateDeserializer extends JsonDeserializer<LocalDate> {
         @Override
         public LocalDate deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {

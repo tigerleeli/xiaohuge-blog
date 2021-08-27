@@ -5,9 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.time.LocalDateTime;
 
-/**
- * @author 小虎哥的技术博客
- **/
+
 public class Permission {
     @TableId(value = "id", type = IdType.INPUT)
     private Long id;

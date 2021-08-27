@@ -6,9 +6,7 @@ import com.llh.shardingjdbc.mapper.ProductMapper;
 import com.llh.shardingjdbc.service.ProductService;
 import org.springframework.stereotype.Service;
 
-/**
- * @author 小虎哥的技术博客
- */
+
 @Service
 public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> implements ProductService {
 }

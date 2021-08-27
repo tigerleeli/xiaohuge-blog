@@ -13,9 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 
-/**
- * @author 小虎哥的技术博客
- */
+
 @Component
 @MappedTypes(LocalDateTime.class)
 @MappedJdbcTypes(value = JdbcType.DATE, includeNullJdbcType = true)
@@ -42,4 +40,3 @@ public class LocalDateTimeTypeHandler extends BaseTypeHandler<LocalDateTime> {
         return Convert.toLocalDateTime(cs.getObject(columnIndex));
     }
 }
-

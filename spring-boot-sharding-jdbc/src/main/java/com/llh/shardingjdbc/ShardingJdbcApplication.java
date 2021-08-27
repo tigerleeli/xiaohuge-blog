@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author 小虎哥的技术博客
+ * 小虎哥的技术博客
  */
 @SpringBootApplication
 @MapperScan(value = "com.llh.shardingjdbc.mapper")

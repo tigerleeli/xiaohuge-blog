@@ -2,13 +2,10 @@ package com.llh.shardingjdbc.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
 
-/**
- * @author 小虎哥的技术博客
- **/
+
 public class Company {
     @TableId(value = "id", type = IdType.INPUT)
     private Long id;

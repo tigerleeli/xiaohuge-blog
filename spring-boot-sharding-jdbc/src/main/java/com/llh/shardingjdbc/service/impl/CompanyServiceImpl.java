@@ -6,9 +6,6 @@ import com.llh.shardingjdbc.mapper.CompanyMapper;
 import com.llh.shardingjdbc.service.CompanyService;
 import org.springframework.stereotype.Service;
 
-/**
- * @author 小虎哥的技术博客
- */
 @Service
 public class CompanyServiceImpl extends ServiceImpl<CompanyMapper, Company> implements CompanyService {
 }
