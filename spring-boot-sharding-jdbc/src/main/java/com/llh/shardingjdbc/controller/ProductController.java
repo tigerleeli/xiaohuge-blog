@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
 
-
+/**
+ * 商品相关接口
+ */
 @RestController
 @RequestMapping("product")
 public class ProductController {

@@ -8,6 +8,9 @@ import javax.annotation.Resource;
 import java.time.LocalDateTime;
 
 
+/**
+ * 公司相关接口
+ */
 @RestController
 @RequestMapping("company")
 public class CompanyController {

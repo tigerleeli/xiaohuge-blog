@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
 
-
+/**
+ * 权限相关接口
+ */
 @RestController
 @RequestMapping("permission")
 public class PermissionController {
