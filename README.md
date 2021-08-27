@@ -12,7 +12,7 @@
 - [Spring Cloud Alibaba微服务系列-分布式id(雪花算法)]()
 - [Spring Cloud Alibaba微服务系列-服务限流、熔断、降级Sentinel](https://github.com/tigerleeli/xiaohuge-blog/tree/master/spring-cloud-alibaba-sentinel)
 - [Spring Cloud Alibaba微服务系列-服务链路追踪Skywalking](https://github.com/tigerleeli/xiaohuge-blog/tree/master/spring-cloud-alibaba-skywalking)
-- [Spring Cloud Alibaba微服务系列-分库分表ShardingSphere]()
+- [Spring Cloud Alibaba微服务系列-分库分表ShardingSphere](https://github.com/tigerleeli/xiaohuge-blog/tree/master/spring-boot-sharding-jdbc)
 - [Spring Cloud Alibaba微服务系列-分布式任务调度xxl-job](https://github.com/tigerleeli/xiaohuge-blog/tree/master/spring-boot-xxl-job)
 - [Spring Cloud Alibaba微服务系列-分布式文件系统Minio](https://github.com/tigerleeli/xiaohuge-blog/tree/master/spring-boot-minio)
 
