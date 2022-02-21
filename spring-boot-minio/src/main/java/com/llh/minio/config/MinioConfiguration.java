@@ -1,6 +1,7 @@
 package com.llh.minio.config;
 
 import io.minio.MinioClient;
+import org.simpleframework.xml.Order;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,5 +20,9 @@ public class MinioConfiguration {
                 .endpoint(END_POINT)
                 .credentials(USERNAME, PASSWORD)
                 .build();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(OrderTypeEnum.PURCHASE.eq(2));
     }
 }
