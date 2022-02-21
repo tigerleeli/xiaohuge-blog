@@ -34,7 +34,7 @@ public class UdpServerHandler extends SimpleChannelInboundHandler<DatagramPacket
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
-        // 测试字节 01 48454C4C4F574F524C44
+        // 测试字节 0148454C4C4F574F524C44
         ByteBuf buf = msg.copy().content();
         byte[] bytes = new byte[buf.readableBytes()];
         buf.readBytes(bytes);
