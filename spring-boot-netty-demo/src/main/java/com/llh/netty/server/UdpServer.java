@@ -8,8 +8,13 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioDatagramChannel;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+
 @Component
 public class UdpServer {
+    @Resource
+    private UdpServerHandler udpServerHandler;
+
     private EventLoopGroup eventLoopGroup;
     private ChannelFuture channelFuture;
 
@@ -21,7 +26,7 @@ public class UdpServer {
                     .channel(NioDatagramChannel.class)
                     .option(ChannelOption.SO_BROADCAST, true)
                     .localAddress(port)
-                    .handler(new UdpServerHandler());
+                    .handler(udpServerHandler);
 
             channelFuture = bootstrap.bind(port).sync().channel().closeFuture().sync();
         } catch (InterruptedException e) {
