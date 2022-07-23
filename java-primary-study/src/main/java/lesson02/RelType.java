@@ -16,10 +16,15 @@ public class RelType {
         // 自动拆箱
         int c = new Integer(10);
 
-        String str = "hello world";
-        BigDecimal money = new BigDecimal("99.99");
         BigInteger number = new BigInteger("100");
-        // 自定义类
+
+        int i = 1000;
+
+        String str = "hello world";
+
+        BigDecimal money = new BigDecimal("99.99");
+
         Student student = new Student();
+
     }
 }
