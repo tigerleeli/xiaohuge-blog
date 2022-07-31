@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9164441f-2345-414e-8378-089a8edd6629" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$PROJECT_DIR$/../../../../tools/apache-maven-3.6.3/resp" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../tools/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../../../tools/apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1uRvkoXtT5hREo1Ep5B72HKn6VM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.llh.shardingjdbc.config" />
+      <recent name="com.llh.shardingjdbc.entity" />
+      <recent name="com.llh.shardingjdbc.mapper" />
+      <recent name="com.llh.shardingjdbc.service.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 6 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 6 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="sharding-jdbc" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RunManager">
+    <configuration name="ShardingJdbcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="sharding-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.llh.shardingjdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.llh.shardingjdbc.ShardingJdbcApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ShardingJdbcApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9164441f-2345-414e-8378-089a8edd6629" name="Default Changelist" comment="" />
+      <created>1624641361614</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624641361614</updated>
+      <workItem from="1624641363891" duration="231000" />
+      <workItem from="1624641602262" duration="10612000" />
+      <workItem from="1624717742109" duration="591000" />
+    </task>
+    <task id="LOCAL-00001" summary="数据库分库，广播表，默认分分片健">
+      <created>1624687160481</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624687160481</updated>
+    </task>
+    <task id="LOCAL-00002" summary="数据库分库，广播表，默认分分片健">
+      <created>1624717788556</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624717788556</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="数据库分库，广播表，默认分分片健" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据库分库，广播表，默认分分片健" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="396" y="141" key="#Project_Structure" timestamp="1624641373056">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="396" y="141" key="#Project_Structure/0.0.1792.1120@0.0.1792.1120" timestamp="1624641373056" />
+    <state x="360" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624641437662">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="360" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1624641437662" />
+    <state x="549" y="351" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1624642876985">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="549" y="351" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1624642876985" />
+    <state x="665" y="174" key="#com.intellij.ide.util.MemberChooser" timestamp="1624686028344">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="665" y="174" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1624686028344" />
+    <state x="429" y="155" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1624644034598">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="429" y="155" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1624644034598" />
+    <state x="337" y="92" key="CommitChangelistDialog2" timestamp="1624717788340">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="337" y="92" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1624717788340" />
+    <state width="1740" height="321" key="GridCell.Tab.0.bottom" timestamp="1624713435151">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435151" />
+    <state width="1740" height="279" key="GridCell.Tab.0.bottom/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734582" />
+    <state width="1740" height="321" key="GridCell.Tab.0.center" timestamp="1624713435150">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435150" />
+    <state width="1740" height="279" key="GridCell.Tab.0.center/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734578" />
+    <state width="1740" height="321" key="GridCell.Tab.0.left" timestamp="1624713435149">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435149" />
+    <state width="1740" height="279" key="GridCell.Tab.0.left/0.0.1792.1120@0.25.1792.1023" timestamp="1624685734349" />
+    <state width="1740" height="279" key="GridCell.Tab.0.left/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734576" />
+    <state width="1740" height="321" key="GridCell.Tab.0.right" timestamp="1624713435150">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435150" />
+    <state width="1740" height="279" key="GridCell.Tab.0.right/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734580" />
+    <state width="1740" height="321" key="GridCell.Tab.1.bottom" timestamp="1624713435154">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435154" />
+    <state width="1740" height="279" key="GridCell.Tab.1.bottom/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734366" />
+    <state width="1740" height="321" key="GridCell.Tab.1.center" timestamp="1624713435152">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435152" />
+    <state width="1740" height="279" key="GridCell.Tab.1.center/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734363" />
+    <state width="1740" height="321" key="GridCell.Tab.1.left" timestamp="1624713435152">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435152" />
+    <state width="1740" height="279" key="GridCell.Tab.1.left/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734362" />
+    <state width="1740" height="321" key="GridCell.Tab.1.right" timestamp="1624713435153">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435153" />
+    <state width="1740" height="279" key="GridCell.Tab.1.right/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734364" />
+    <state width="1740" height="321" key="GridCell.Tab.2.bottom" timestamp="1624713435156">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.2.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435156" />
+    <state width="1740" height="279" key="GridCell.Tab.2.bottom/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734375" />
+    <state width="1740" height="321" key="GridCell.Tab.2.center" timestamp="1624713435155">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.2.center/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435155" />
+    <state width="1740" height="279" key="GridCell.Tab.2.center/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734368" />
+    <state width="1740" height="321" key="GridCell.Tab.2.left" timestamp="1624713435154">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.2.left/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435154" />
+    <state width="1740" height="279" key="GridCell.Tab.2.left/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734367" />
+    <state width="1740" height="321" key="GridCell.Tab.2.right" timestamp="1624713435155">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1740" height="321" key="GridCell.Tab.2.right/0.0.1792.1120@0.0.1792.1120" timestamp="1624713435155" />
+    <state width="1740" height="279" key="GridCell.Tab.2.right/0.25.1792.1023@0.25.1792.1023" timestamp="1624685734369" />
+    <state x="289" y="73" key="SettingsEditor" timestamp="1624643552056">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="289" y="73" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1624643552056" />
+    <state x="396" y="234" key="Vcs.Push.Dialog.v2" timestamp="1624717790576">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="396" y="234" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1624717790576" />
+    <state x="400" y="57" width="992" height="1005" key="find.popup" timestamp="1624686838653">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="400" y="57" width="992" height="1005" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1624686838653" />
+  </component>
+</project>
