@@ -1,5 +1,11 @@
 赠人`star`，手留余香！
 
+相关学习文档看技术博客：https://blog.csdn.net/qq_28883885?type=blog
+ 
+微信公众号搜索关注：小虎哥的技术博客
+
+
+
 **目录 Spring Cloud Alibaba 微服务系列文章**
 - [Spring Cloud Alibaba微服务系列-准备工作](https://github.com/tigerleeli/xiaohuge-blog)
 - [Spring Cloud Alibaba微服务系列-服务注册中心Nacos](https://github.com/tigerleeli/xiaohuge-blog/tree/master/spring-cloud-alibaba-registry)

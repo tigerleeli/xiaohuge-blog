@@ -24,12 +24,12 @@ public class JdbcDemo {
             conn.commit();
         } catch (SQLException e) {
             // 回滚事务
-            conn.rollback();
+//            conn.rollback();
         } finally {
-            // 关闭连接
-            ps1.close();
-            ps2.close();
-            conn.close();
+//            // 关闭连接
+//            ps1.close();
+//            ps2.close();
+//            conn.close();
         }
 
     }
