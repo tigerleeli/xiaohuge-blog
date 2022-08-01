@@ -1,10 +1,13 @@
 赠人`star`，手留余香！
 
-相关文档看博客：https://blog.csdn.net/qq_28883885?type=blog
- 
 关注微信公众号：小虎哥的技术博客，每天一篇文章，让你我都成为更好的自己。
 
-![](.\images\qrcode.png)
+相关文档可以看技术博客：
+- Java基础系列：[地址](https://blog.csdn.net/qq_28883885/category_11929861.html)
+- 微服务系列： [地址](https://blog.csdn.net/qq_28883885/category_11052257.html) 
+
+
+
 
 **目录 Spring Cloud Alibaba 微服务系列文章**
 - [Spring Cloud Alibaba微服务系列-准备工作](https://github.com/tigerleeli/xiaohuge-blog)
