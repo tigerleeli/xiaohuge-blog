@@ -4,6 +4,7 @@
  
 微信公众号搜索关注：小虎哥的技术博客
 
+![微信公众号](https://github.com/tigerleeli/xiaohuge-blog/blob/master/images/qrcode.png)
 
 **目录 Spring Cloud Alibaba 微服务系列文章**
 - [Spring Cloud Alibaba微服务系列-准备工作](https://github.com/tigerleeli/xiaohuge-blog)
