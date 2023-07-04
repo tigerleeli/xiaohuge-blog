@@ -25,7 +25,7 @@
         <hutool-version>5.8.20</hutool-version>
         <hibernate.validator-version>6.1.5.Final</hibernate.validator-version>
         <jjwt-version>0.9.1</jjwt-version>
-        <lombok-version>1.18.24</lombok-version>
+        <lombok-version>1.18.26</lombok-version>
     </properties>
 
     <dependencies>
