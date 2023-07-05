@@ -7,14 +7,11 @@ import cn.hutool.core.util.ObjectUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.llh.moneykeep.common.BasePageParam;
-import com.llh.moneykeep.common.BasePageResult;
 import com.llh.moneykeep.common.BizException;
 import com.llh.moneykeep.common.ContextHolder;
 import com.llh.moneykeep.dto.record.*;
 import com.llh.moneykeep.entity.Account;
 import com.llh.moneykeep.entity.Category;
-import com.llh.moneykeep.entity.Record;
 import com.llh.moneykeep.entity.Record;
 import com.llh.moneykeep.mapper.RecordMapper;
 import com.llh.moneykeep.service.AccountService;
@@ -92,27 +89,9 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     @Override
     public RecordPageResult<RecordResult> page(RecordPageParam param) {
-        long userId = ContextHolder.getContext().getUserId();
-        LambdaQueryWrapper<Record> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(Record::getIsDeleted, 0);
-        queryWrapper.eq(Record::getUserId, userId);
-        queryWrapper.orderByDesc(Record::getCreateTime);
-        if (ObjectUtil.isNotNull(param.getStartDate())) {
-            // 开始日期
-            queryWrapper.ge(Record::getCreateTime, LocalDateTime.of(param.getStartDate(), LocalTime.MIN));
-        }
-        if (ObjectUtil.isNotNull(param.getEndDate())) {
-            // 结束日期
-            queryWrapper.le(Record::getCreateTime, LocalDateTime.of(param.getEndDate(), LocalTime.MAX));
-        }
-        if (ObjectUtil.isNotNull(param.getCategoryId())) {
-            // 分类
-            queryWrapper.eq(Record::getCategoryId, param.getCategoryId());
-        }
-        if (ObjectUtil.isNotNull(param.getAccountId())) {
-            // 账户
-            queryWrapper.eq(Record::getAccountId, param.getAccountId());
-        }
+        LambdaQueryWrapper<Record> queryWrapper = generateQueryWrapper(param.getStartDate(),
+                param.getEndDate(), param.getCategoryId(), param.getAccountId());
+
         // 分页查询
         Page<Record> page = page(new Page<>(param.getPageNum(), param.getPageSize()), queryWrapper);
 
@@ -127,17 +106,9 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
             return new RecordPageResult<>(page, ListUtil.empty(), totalAmount);
         }
 
-        List<Long> categoryIds = recordList.stream()
-                .map(Record::getCategoryId)
-                .distinct()
-                .collect(Collectors.toList());
-        List<Category> categoryList = categoryService.listByIds(categoryIds);
+        List<Category> categoryList = listCategoryFromRecordList(recordList);
 
-        List<Long> accountIds = recordList.stream()
-                .map(Record::getAccountId)
-                .distinct()
-                .collect(Collectors.toList());
-        List<Account> accountList = accountService.listByIds(accountIds);
+        List<Account> accountList = listAccountFromRecordList(recordList);
 
         List<RecordResult> resList = new ArrayList<>();
         for (Record record : recordList) {
@@ -162,30 +133,54 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     @Override
     public BigDecimal statsTotalAmount(AmountStatsParam param) {
-        long userId = ContextHolder.getContext().getUserId();
-        LambdaQueryWrapper<Record> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(Record::getIsDeleted, 0);
-        queryWrapper.eq(Record::getUserId, userId);
-        queryWrapper.orderByDesc(Record::getCreateTime);
-        if (ObjectUtil.isNotNull(param.getStartDate())) {
-            // 开始日期
-            queryWrapper.ge(Record::getCreateTime, LocalDateTime.of(param.getStartDate(), LocalTime.MIN));
-        }
-        if (ObjectUtil.isNotNull(param.getEndDate())) {
-            // 结束日期
-            queryWrapper.le(Record::getCreateTime, LocalDateTime.of(param.getEndDate(), LocalTime.MAX));
-        }
-        if (ObjectUtil.isNotNull(param.getCategoryId())) {
-            // 分类
-            queryWrapper.eq(Record::getCategoryId, param.getCategoryId());
-        }
-        if (ObjectUtil.isNotNull(param.getAccountId())) {
-            // 账户
-            queryWrapper.eq(Record::getAccountId, param.getAccountId());
-        }
+        LambdaQueryWrapper<Record> queryWrapper = generateQueryWrapper(param.getStartDate(), param.getEndDate(), param.getCategoryId(), param.getAccountId());
         // 分页查询
         List<Record> recordList = list(queryWrapper);
         return recordList.stream().map(Record::getAmount).reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    private LambdaQueryWrapper<Record> generateQueryWrapper(LocalDate startDate,
+                                                            LocalDate endDate,
+                                                            Long categoryId,
+                                                            Long accountId) {
+        long userId = ContextHolder.getContext().getUserId();
+        LambdaQueryWrapper<Record> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(Record::getUserId, userId);
+        queryWrapper.eq(Record::getIsDeleted, 0);
+        queryWrapper.orderByDesc(Record::getCreateTime);
+        if (ObjectUtil.isNotNull(startDate)) {
+            // 开始日期
+            queryWrapper.ge(Record::getCreateTime, LocalDateTime.of(startDate, LocalTime.MIN));
+        }
+        if (ObjectUtil.isNotNull(endDate)) {
+            // 结束日期
+            queryWrapper.le(Record::getCreateTime, LocalDateTime.of(endDate, LocalTime.MAX));
+        }
+        if (ObjectUtil.isNotNull(categoryId)) {
+            // 分类
+            queryWrapper.eq(Record::getCategoryId, categoryId);
+        }
+        if (ObjectUtil.isNotNull(accountId)) {
+            // 账户
+            queryWrapper.eq(Record::getAccountId, accountId);
+        }
+        return queryWrapper;
+    }
+
+    private List<Account> listAccountFromRecordList(List<Record> recordList) {
+        List<Long> accountIds = recordList.stream()
+                .map(Record::getAccountId)
+                .distinct()
+                .collect(Collectors.toList());
+        return accountService.listByIds(accountIds);
+    }
+
+    private List<Category> listCategoryFromRecordList(List<Record> recordList) {
+        List<Long> categoryIds = recordList.stream()
+                .map(Record::getCategoryId)
+                .distinct()
+                .collect(Collectors.toList());
+        return categoryService.listByIds(categoryIds);
     }
 
 }
