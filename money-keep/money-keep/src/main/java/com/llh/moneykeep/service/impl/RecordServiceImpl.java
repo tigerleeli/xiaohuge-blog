@@ -162,7 +162,30 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     @Override
     public BigDecimal statsTotalAmount(AmountStatsParam param) {
-        return null;
+        long userId = ContextHolder.getContext().getUserId();
+        LambdaQueryWrapper<Record> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(Record::getIsDeleted, 0);
+        queryWrapper.eq(Record::getUserId, userId);
+        queryWrapper.orderByDesc(Record::getCreateTime);
+        if (ObjectUtil.isNotNull(param.getStartDate())) {
+            // 开始日期
+            queryWrapper.ge(Record::getCreateTime, LocalDateTime.of(param.getStartDate(), LocalTime.MIN));
+        }
+        if (ObjectUtil.isNotNull(param.getEndDate())) {
+            // 结束日期
+            queryWrapper.le(Record::getCreateTime, LocalDateTime.of(param.getEndDate(), LocalTime.MAX));
+        }
+        if (ObjectUtil.isNotNull(param.getCategoryId())) {
+            // 分类
+            queryWrapper.eq(Record::getCategoryId, param.getCategoryId());
+        }
+        if (ObjectUtil.isNotNull(param.getAccountId())) {
+            // 账户
+            queryWrapper.eq(Record::getAccountId, param.getAccountId());
+        }
+        // 分页查询
+        List<Record> recordList = list(queryWrapper);
+        return recordList.stream().map(Record::getAmount).reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
 }
