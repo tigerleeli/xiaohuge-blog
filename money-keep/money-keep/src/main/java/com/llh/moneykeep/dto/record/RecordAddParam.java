@@ -25,4 +25,6 @@ public class RecordAddParam {
     @NotNull(message = "请选择类型")
     @Range(min = 1, max = 2, message = "类型选择错误")
     private Integer type;
+
+    private String remark;
 }
