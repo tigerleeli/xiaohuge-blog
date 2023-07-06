@@ -1,16 +1,15 @@
 package com.llh.moneykeep.controller;
 
 import com.llh.moneykeep.common.CommonResult;
+import com.llh.moneykeep.common.ContextHolder;
 import com.llh.moneykeep.dto.user.LoginParam;
 import com.llh.moneykeep.dto.user.LoginResult;
 import com.llh.moneykeep.dto.user.RegisterParam;
+import com.llh.moneykeep.entity.User;
 import com.llh.moneykeep.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -34,5 +33,11 @@ public class UserController {
                                           @RequestBody RegisterParam param) {
         log.info("用户注册： {}", param.getUsername());
         return CommonResult.success(userService.register(param));
+    }
+
+    @GetMapping("get")
+    public CommonResult<User> get() {
+        log.info("获取个人信息");
+        return CommonResult.success(userService.getById(ContextHolder.getContext().getUserId()));
     }
 }
