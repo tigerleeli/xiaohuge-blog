@@ -13,5 +13,5 @@ public interface CategoryService extends IService<Category> {
 
     Boolean removeById(Long id);
 
-    List<Category> listAll();
+    List<Category> listAll(Integer type);
 }

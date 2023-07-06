@@ -41,10 +41,11 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
     }
 
     @Override
-    public List<Category> listAll() {
+    public List<Category> listAll(Integer type) {
         long userId = ContextHolder.getContext().getUserId();
         return list(new LambdaQueryWrapper<Category>()
                 .eq(Category::getUserId, userId)
-                .eq(Category::getIsDeleted, 0));
+                .eq(Category::getIsDeleted, 0)
+                .eq(Category::getType, type));
     }
 }

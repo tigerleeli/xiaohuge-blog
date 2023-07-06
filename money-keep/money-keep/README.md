@@ -51,7 +51,7 @@ CREATE TABLE record
     `account_id`  bigint            NOT NULL COMMENT '账户ID',
     `amount`      decimal(10, 2) NOT NULL COMMENT '金额',
     `type`        int            NOT NULL COMMENT '类型，1：支出，2：收入',
-    `remark`      varchar(200)   NOT NULL COMMENT '备注',
+    `remark`      varchar(200)   DEFAULT NULL COMMENT '备注',
     `create_time` datetime       NOT NULL COMMENT '创建时间',
     `update_time` datetime       NOT NULL COMMENT '更新时间',
     `is_deleted`  int            NOT NULL DEFAULT 0 COMMENT '逻辑删除，0：未删除，1：已删除',

@@ -36,8 +36,10 @@ public class CategoryController {
     }
 
     @GetMapping("listAll")
-    public CommonResult<List<Category>> listAll() {
+    public CommonResult<List<Category>> listAll(@Validated
+                                                @NotNull(message = "请选择类型")
+                                                @RequestParam Integer type) {
         log.info("获取所有分类");
-        return CommonResult.success(categoryService.listAll());
+        return CommonResult.success(categoryService.listAll(type));
     }
 }
