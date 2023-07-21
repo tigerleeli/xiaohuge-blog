@@ -1,0 +1,184 @@
+多态是指同一操作作用于不同的对象上，能产生不同的解释和不同的执行方式，通俗来讲就是用一种类型的变量来引用不同的对象，从而调用不同的方法，产生不同的行为。多态是实现面向对象的软件技术中必不可少的一个内容。
+
+## 继承和多态
+
+让我们以一只动物为例：狗是一种动物，它会跑；猫也是一种动物，它会走。如果我们想用一个方法来描述它们的运动行为，该怎么做呢？
+
+我们可以先定义一个 Animal 类，里面包含一个 move() 方法，来描述它们共同的运动方式：
+
+```java
+public class Animal {
+   public void move() {
+      System.out.println("动物正在移动");
+   }
+}
+```
+
+然后，我们可以在 Animal 的子类中，重写 move() 方法，以实现不同的运动方式：
+
+```java
+public class Dog extends Animal {
+   public void move() {
+      System.out.println("小狗在跑");
+   }
+}
+
+public class Cat extends Animal {
+   public void move() {
+      System.out.println("小猫在走");
+   }
+}
+```
+
+这里我们让 Dog 类重写了 move() 方法，实现了“跑”这种运动方式；而 Cat 类重写了 move() 方法，实现了“走”这种运动方式。
+
+最后，我们可以在主函数中，定义一个 Animal 类型的变量，并分别用 Dog 和 Cat 的实例来赋值，这样我们就可以用相同的方法名 move() 来调用不同的实现，即实现多态的效果：
+
+```java
+public class Test {
+   public static void main(String args[]) {
+      Animal animal = new Animal();
+      Animal dog = new Dog();
+      Animal cat = new Cat();
+
+      animal.move(); // 输出动物正在移动
+      dog.move();    // 输出小狗在跑
+      cat.move();    // 输出小猫在走
+   }
+}
+```
+
+在上述示例中，我们定义了 Animal 父类和 Dog、Cat 两个子类。在主函数中，我们分别声明了一个父类对象、一个 Dog 对象和一个 Cat 对象。当我们调用它们的 move() 方法时，表示动物正在移动、小狗在跑和小猫在走，这就是多态的实现原理。
+
+## 接口和多态
+
+除了继承，接口也可以帮助我们实现多态的功能。接口是指一组方法的集合，类可以实现这些方法并重写它们。和继承不同的是，一个类可以实现多个接口，从而实现多态的效果。
+
+例如，我们可以定义一个接口 Run，其中包含一个 run() 方法，它表示一些可以奔跑的东西。然后我们可以在一个类中实现这个接口，并实现其中的方法，以表示具体的奔跑行为。最后，在代码中，我们可以用接口类型来声明一个变量，从而实现对多个实现类的引用。
+
+下面是一个简单的 Java 程序示例：
+
+```java
+public interface Run {
+   void run();
+}
+
+public class Dog implements Run {
+   public void run() {
+      System.out.println("小狗在跑");
+   }
+}
+
+public class Cat implements Run {
+   public void run() {
+      System.out.println("小猫在走");
+   }
+}
+
+public class Test {
+   public static void main(String[] args) {
+      Run dog = new Dog();
+      Run cat = new Cat();
+
+      dog.run(); // 输出小狗在跑
+      cat.run(); // 输出小猫在走
+   }
+}
+```
+
+在上述示例中，我们定义了一个 Run 接口，它包含一个 run() 方法。然后我们可以在一个类中实现这个接口，并实现其中的方法，以表示具体的奔跑行为。最后，在主函数中，我们分别声明了一个 Dog 类型、一个 Cat 类型的变量，并用它们的实例进行赋值和调用，从而实现多态的效果。
+
+
+## 方法重载和多态
+
+方法重载是指在同一个类或一个类的继承结构中，使用相同的方法名，但要求参数类型或个数不同，使得一个类拥有多个具有不同参数的方法，自动匹配到不同的方法实现。方法的重载可以让我们更好地重用代码和实现更加灵活的方法调用。
+
+例如，我们可以重载一个 add() 方法，使得它既可以实现整数相加，又可以实现小数相加。在代码中，我们可以用相同的方法名 add() 来调用这两种不同的方法，最终调用的方法取决于实参类型。
+
+下面是一个简单的 Java 程序示例：
+
+```java
+public class Calculation {
+   public void add(int a, int b) {
+      System.out.println("两个整数相加的结果是：" + (a + b));
+   }
+
+   public void add(double a, double b) {
+      System.out.println("两个小数相加的结果是：" + (a + b));
+   }
+}
+
+public class Test {
+   public static void main(String args[]) {
+      Calculation calculation = new Calculation();
+
+      calculation.add(10, 20);  // 输出两个整数相加的结果是：30
+      calculation.add(1.2, 3.4); // 输出两个小数相加的结果是：4.6
+   }
+}
+```
+
+在上述示例中，我们定义了一个 Calculation 类，其中包含了两个相同名称、但参数类型不同的 add() 方法，一个是将两个整数相加，另一个是将两个小数相加。在主函数中，我们分别调用这两个方法，并分别输出它们的结果。这展示了编译时多态的实现原理。
+
+## 方法覆盖和多态
+
+方法覆盖是指子类重写了父类中的某个方法，并且子类中的方法和父类中的方法具有相同的方法名称、返回类型和参数列表。当我们使用父类类型来声明一个变量，并将其赋值为子类的实例时，该变量将会调用子类中的方法，实现动态多态的效果。
+
+例如，我们可以定义一个新的类 Panther，它继承自 Animal 类，然后重写了 move() 方法，以实现新的运动方式。最后，在主函数中，我们可以用 Animal 类型来声明一个变量，并将其分别赋值为 Dog、Cat 和 Panther 的实例，用 move() 方法来调用它们的运动行为，实现动态多态的效果。
+
+下面是一个简单的 Java 程序示例：
+
+```java
+public class Panther extends Animal {
+   public void move() {
+      System.out.println("黑豹在奔跑");
+   }
+}
+
+public class Test {
+   public static void main(String[] args) {
+      Animal animal1 = new Animal();
+      Animal animal2 = new Dog();
+      Animal animal3 = new Cat();
+      Animal animal4 = new Panther();
+
+      animal1.move(); // 输出动物正在移动
+      animal2.move(); // 输出小狗在跑
+      animal3.move(); // 输出小猫在走
+      animal4.move(); // 输出黑豹在奔跑
+   }
+}
+```
+
+在上述示例中，我们定义了一个 Panther 类，它继承自 Animal 类，然后重写了 move() 方法，以实现新的运动方式。在主函数中，我们分别声明了一个父类对象、一个 Dog 对象、一个 Cat 对象和一个 Panther 对象，并用它们的实例进行赋值和调用，最终调用的方法取决于实际对象的类型，这就是运行时多态的实现原理。
+
+## 多态原理分析
+多态可以分为编译时多态和运行时多态两种。
+
+### 运行时多态
+运行时多态又称动态多态，是指在程序运行期间根据对象的类型来确定方法的调用。运行时多态是通过方法重写和接口实现来实现的。
+
+上述的动物类 Animal，它拥有一个 move() 方法来描述动物的运动行为，这个move() 具体调用哪个方法（Animal/Dog/Cat）在编译期间是不知道的，它是在运行期间确定的，在运行期间给他传入什么对象它就调用什么方法。
+
+### 编译时多态
+编译时多态又称静态多态，是指在编译期间就确定了方法的调用。编译时多态是通过方法重载来实现的，即同一个类中有多个名称、参数不同的方法，编译器在调用这些方法时，会根据实参类型的不同来匹配相应的方法。
+
+## 通过JDBC理解动态
+
+JDBC 是 Java 数据库连接的标准接口，它允许 Java 应用程序通过统一的接口访问不同的数据库。使用 JDBC 可以连接多种数据库，如 MySQL、Oracle、SQL Server 等，这就要求 JDBC 具有语言无关性，可以在运行时动态确定将要连接的数据库类型，这样才能支持多种数据库的连接。
+
+JDBC 中用到的多态主要是运行时多态。JDBC 接口定义了一些通用的方法和接口，如 Connection、Statement、ResultSet 等，它们都是抽象类或接口。具体的数据库驱动程序实现了这些方法和接口，通过实现这些方法和接口，实现了连接到具体的数据库。在连接数据库时，我们通过 DriverManager 的 getConnection() 方法获取 Connection 对象，此时是用的是 JDBC 接口，而不是具体的数据库驱动连接，只有在使用 Connection 对象的时候才会动态判断实际使用的数据库类型。以下是一个简单的 JDBC 连接 MySQL 数据库的示例代码：
+
+```java
+String url = "jdbc:mysql://localhost:3306/test";
+String username = "root";
+String password = "123456";
+Connection conn = DriverManager.getConnection(url, username, password);
+```
+
+在上述代码中，我们只是通过 JDBC 接口连接到 MySQL 数据库，并没有使用具体的 MySQL 驱动程序。当我们调用 conn.prepareStatement() 方法时，此时才根据具体的数据库类型获取到一个实现了 PreparedStatement 接口的对象，例如 MySQLPreparedStatement。这就是在运行时动态确定要使用的数据库类型，实现了运行时多态的效果。
+
+总之，JDBC 中充分利用了 Java 的多态特性，通过动态绑定技术，实现了在不同数据库之间切换时的语言无关性。JDBC 连接的抽象设计，可以让我们编写一次连接代码，就可以连接多个数据库，实现了代码复用和可扩展性。
+
+## 总结
+多态是 Java 面向对象编程中的重要概念。它允许我们在编写代码时，只需要知道一个对象的类型，而无需知道它所具体属于的子类类型。在 Java 中，多态的实现原理主要有两种方式：运行时多态和编译时多态。前者是通过方法的重写实现的，后者则是通过方法的重载实现的。同时，多态也让 Java 的代码更加灵活、可扩展性更强。
