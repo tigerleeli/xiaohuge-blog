@@ -2,10 +2,14 @@
 
 关注微信公众号：小虎哥的技术博客，每天一篇文章，让你我都成为更好的自己。
 
+
+
+
 相关文档可以看技术博客：
+- Java打好基础系列：[地址](https://blog.csdn.net/qq_28883885/category_12386012.html)
+- Java设计模式系列：[地址](https://blog.csdn.net/qq_28883885/category_12389554.html)
 - Java基础系列：[地址](https://blog.csdn.net/qq_28883885/category_11929861.html)
 - 微服务系列： [地址](https://blog.csdn.net/qq_28883885/category_11052257.html) 
-
 
 
 
