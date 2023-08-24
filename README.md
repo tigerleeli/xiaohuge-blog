@@ -11,13 +11,13 @@
 ## 2. 内容 🪴🪴
 目前拟定的文章系列包括：
 
-- 1.从0到1编程必学技术知识
-- 2.Java基础系列
-- 3.SpringBoot系列
-- 4.SpringCloud系列
-- 5.Java设计模式系列
+- 1. 计算机和编程底层原理系列
+- 2. Java基础系列
+- 3. Spring Boot系列
+- 4. Spring Cloud系列
+- 5. Java设计模式系列
 
-### 1）从0到1编程必学技术知识🌱🌱
+### 1）计算机和编程原理系列🌱🌱
 
 **进行中...🤪**
 
@@ -33,7 +33,7 @@
 这个系列旨在帮助Java初学者建立起扎实的基础。将涵盖Java语言中的常用概念、语法、数据结构等内容。会包括JDK安装、基本数据类型、运算符、表达式、类和对象、
 数组、访问控制符、接口和抽象类、集合类、枚举、异常等基础知识，还会包括泛型、注解、多线程、锁、反射、Class类、Lambda表达式等Java高级知识。
 
-### 3）SpringBoot系列🌳🌳
+### 3）Spring Boot系列🌳🌳
 
 **进行中...🤪** 
 
@@ -43,7 +43,7 @@
 本系列将包括从零开始创建SpringBoot项目、SpringBoot集成Mybatis、SpringBoot集成JPA、SpringBoot集成Mybatis-Plus、IOC原理、AOP原理，
 SpringBoot集成Redis、SpringBoot集成MongoDB、SpringBoot集成消息队列、ORM示例、SpringBoot集成任务调度、SpringBoot集成文件存储MinIO、自定义starter等内容。
 
-### 4）SpringCloud系列 🎄🎄
+### 4）Spring Cloud系列 🎄🎄
 **未开始😭**
 
 ### 5）Java设计模式系列🌿🌿
