@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.example</groupId>
+        <version>1.0.0</version>
+        <artifactId>parent</artifactId>
+        <relativePath/>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>spring-cloud-demo</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>spring-cloud-demo</name>
+    <description>spring-cloud-demo</description>
+
+    <modules>
+        <module>parent</module>
+        <module>provider-service</module>
+        <module>consumer-service</module>
+    </modules>
+</project>
