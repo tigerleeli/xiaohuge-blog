@@ -1,3 +1,12 @@
+target/
+**/target/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
 node_modules/
 .project
 unpackage/
