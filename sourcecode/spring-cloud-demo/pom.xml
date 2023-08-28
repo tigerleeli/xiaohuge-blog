@@ -21,5 +21,6 @@
         <module>consumer-service</module>
         <module>gateway-service</module>
         <module>config-demo</module>
+        <module>sentinel-demo</module>
     </modules>
 </project>
