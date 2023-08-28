@@ -19,5 +19,6 @@
         <module>parent</module>
         <module>provider-service</module>
         <module>consumer-service</module>
+        <module>gateway-service</module>
     </modules>
 </project>
