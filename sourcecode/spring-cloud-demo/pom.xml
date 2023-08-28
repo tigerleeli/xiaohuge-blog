@@ -20,5 +20,6 @@
         <module>provider-service</module>
         <module>consumer-service</module>
         <module>gateway-service</module>
+        <module>config-demo</module>
     </modules>
 </project>
