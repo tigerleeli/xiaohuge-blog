@@ -23,5 +23,6 @@
         <module>config-demo</module>
         <module>sentinel-demo</module>
         <module>xxl-job-demo</module>
+        <module>id-service</module>
     </modules>
 </project>
