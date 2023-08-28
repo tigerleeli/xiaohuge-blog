@@ -22,5 +22,6 @@
         <module>gateway-service</module>
         <module>config-demo</module>
         <module>sentinel-demo</module>
+        <module>xxl-job-demo</module>
     </modules>
 </project>
