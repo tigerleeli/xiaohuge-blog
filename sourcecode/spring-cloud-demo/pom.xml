@@ -20,10 +20,12 @@
         <module>provider-service</module>
         <module>consumer-service</module>
         <module>gateway-service</module>
-        <module>config-demo</module>
-        <module>sentinel-demo</module>
         <module>xxl-job-service</module>
         <module>id-service</module>
         <module>minio-service</module>
+
+        <module>config-demo</module>
+        <module>sentinel-demo</module>
+        <module>sharding-jdbc-demo</module>
     </modules>
 </project>
