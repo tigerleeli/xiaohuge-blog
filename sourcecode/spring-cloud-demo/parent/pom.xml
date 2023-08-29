@@ -28,6 +28,8 @@
         <hutool-version>5.8.9</hutool-version>
         <minio-version>8.4.3</minio-version>
         <okhttp3.version>4.8.1 </okhttp3.version>
+
+        <snakeyaml.version>1.33</snakeyaml.version>
     </properties>
 
     <dependencyManagement>

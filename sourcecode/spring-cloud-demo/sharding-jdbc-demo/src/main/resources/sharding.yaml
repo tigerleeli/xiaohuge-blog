@@ -1,0 +1,39 @@
+dataSources:
+  ds_0:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://127.0.0.1:3306/sharding_0?serverTimezone=UTC&useSSL=false
+    username: root
+    password: 123456
+  ds_1:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://127.0.0.1:3306/sharding_1?serverTimezone=UTC&useSSL=false
+    username: root
+    password: 123456
+
+rules:
+- !SHARDING
+  tables:
+    company:
+      actualDataNodes: ds_$->{0..1}.company
+      databaseStrategy:
+        standard:
+          shardingColumn: id
+          shardingAlgorithmName: id_inline
+  defaultDatabaseStrategy:
+    standard:
+      shardingColumn: company_id
+      shardingAlgorithmName: database_inline
+  shardingAlgorithms:
+    database_inline:
+      type: INLINE
+      props:
+        algorithm-expression: ds_$->{company_id % 2}
+    id_inline:
+      type: INLINE
+      props:
+        algorithm-expression: ds_$->{id % 2}
+
+props:
+  sql-show: true
