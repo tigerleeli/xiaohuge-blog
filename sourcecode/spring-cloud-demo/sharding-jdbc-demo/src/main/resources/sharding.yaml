@@ -35,5 +35,8 @@ rules:
       props:
         algorithm-expression: ds_$->{id % 2}
 
+- !BROADCAST
+  tables: # 广播表规则列表
+    - permission
 props:
   sql-show: true
