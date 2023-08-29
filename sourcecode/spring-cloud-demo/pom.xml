@@ -24,5 +24,6 @@
         <module>sentinel-demo</module>
         <module>xxl-job-service</module>
         <module>id-service</module>
+        <module>minio-service</module>
     </modules>
 </project>

@@ -26,7 +26,8 @@
         <lombok.version>1.18.28</lombok.version>
         <shardingsphere-jdbc.version>5.2.0</shardingsphere-jdbc.version>
         <hutool-version>5.8.9</hutool-version>
-        <minio-version>8.2.2</minio-version>
+        <minio-version>8.4.3</minio-version>
+        <okhttp3.version>4.8.1 </okhttp3.version>
     </properties>
 
     <dependencyManagement>
