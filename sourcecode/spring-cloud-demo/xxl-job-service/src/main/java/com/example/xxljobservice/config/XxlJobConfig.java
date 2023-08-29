@@ -1,4 +1,4 @@
-package com.example.xxljobdemo.config;
+package com.example.xxljobservice.config;
 
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import lombok.extern.slf4j.Slf4j;

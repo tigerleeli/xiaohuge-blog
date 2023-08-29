@@ -9,11 +9,11 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>xxl-job-demo</artifactId>
+    <artifactId>xxl-job-service</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
-    <name>xxl-job-demo</name>
-    <description>xxl-job-demo</description>
+    <name>xxl-job-service</name>
+    <description>xxl-job-service</description>
 
     <dependencies>
         <dependency>

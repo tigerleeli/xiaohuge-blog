@@ -1,4 +1,4 @@
-package com.example.xxljobdemo.controller;
+package com.example.xxljobservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

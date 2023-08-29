@@ -22,7 +22,7 @@
         <module>gateway-service</module>
         <module>config-demo</module>
         <module>sentinel-demo</module>
-        <module>xxl-job-demo</module>
+        <module>xxl-job-service</module>
         <module>id-service</module>
     </modules>
 </project>
