@@ -30,6 +30,7 @@
         <okhttp3.version>4.8.1</okhttp3.version>
 
         <snakeyaml.version>1.33</snakeyaml.version>
+        <redisson-starter.version>3.16.8</redisson-starter.version>
     </properties>
 
     <dependencyManagement>
@@ -87,6 +88,11 @@
                 <version>${minio-version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson-starter.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
