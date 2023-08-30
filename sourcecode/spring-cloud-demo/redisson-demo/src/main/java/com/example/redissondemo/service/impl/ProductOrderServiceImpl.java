@@ -27,7 +27,7 @@ public class ProductOrderServiceImpl extends ServiceImpl<ProductOrderMapper, Pro
 
     @Override
     public Boolean buy(Long productId, Integer number) {
-        RLock lock = redissonClient.getLock("lock_key");
+        RLock lock = redissonClient.getLock("lock_key_" + productId);
 
         try {
             boolean lockRes = lock.tryLock(5, TimeUnit.SECONDS);
