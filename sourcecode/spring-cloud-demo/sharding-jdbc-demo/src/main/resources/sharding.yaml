@@ -21,6 +21,8 @@ rules:
         standard:
           shardingColumn: id
           shardingAlgorithmName: id_inline
+    product:
+      actualDataNodes: ds_$->{0..1}.product
   defaultDatabaseStrategy:
     standard:
       shardingColumn: company_id

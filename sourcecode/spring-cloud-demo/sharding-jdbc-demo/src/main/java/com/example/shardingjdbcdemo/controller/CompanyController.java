@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 
 @RestController
@@ -24,8 +25,8 @@ public class CompanyController {
     @GetMapping("add")
     public Boolean add() {
         Company company = new Company();
-        company.setId(idService.generateId("test"));
-        company.setName("小虎哥的技术博客");
+        company.setId(idService.generateId("company"));
+        company.setName("企业名称；" + UUID.randomUUID());
         company.setCreateTime(LocalDateTime.now());
         company.setUpdateTime(LocalDateTime.now());
         return companyService.save(company);

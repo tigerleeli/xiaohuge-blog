@@ -24,10 +24,10 @@
         <mybatis.version>2.3.1</mybatis.version>
         <mybatis-plus.version>3.5.3</mybatis-plus.version>
         <lombok.version>1.18.28</lombok.version>
-        <shardingsphere-jdbc.version>5.2.0</shardingsphere-jdbc.version>
+        <shardingsphere-jdbc.version>5.4.0</shardingsphere-jdbc.version>
         <hutool-version>5.8.9</hutool-version>
         <minio-version>8.4.3</minio-version>
-        <okhttp3.version>4.8.1 </okhttp3.version>
+        <okhttp3.version>4.8.1</okhttp3.version>
 
         <snakeyaml.version>1.33</snakeyaml.version>
     </properties>
@@ -71,7 +71,7 @@
 
             <dependency>
                 <groupId>org.apache.shardingsphere</groupId>
-                <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
+                <artifactId>shardingsphere-jdbc-core</artifactId>
                 <version>${shardingsphere-jdbc.version}</version>
             </dependency>
 
@@ -86,6 +86,7 @@
                 <artifactId>minio</artifactId>
                 <version>${minio-version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
