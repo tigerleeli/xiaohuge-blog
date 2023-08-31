@@ -1,5 +1,5 @@
 
-![](https://files.mdnice.com/user/33663/8784cad0-82a0-482b-b0be-00f309be7dd9.png)
+![](/images/ProgrammeBasic/00/1.png)
 
 ## 名称的含义
 
