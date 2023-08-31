@@ -1,3 +1,5 @@
+*如果遇到github图片不显示，推荐用gitee：[https://gitee.com/cunzaizhe/xiaohuge-blog](https://gitee.com/cunzaizhe/xiaohuge-blog)*
+
 ## 1. 开头 ❤️❤️
 *为中华名族伟大复兴而编程🔥🔥，不做码农，只做工程师！*
 
