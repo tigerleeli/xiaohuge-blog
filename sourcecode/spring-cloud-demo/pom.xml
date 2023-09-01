@@ -27,5 +27,7 @@
         <module>config-demo</module>
         <module>sentinel-demo</module>
         <module>sharding-jdbc-demo</module>
+        <module>rocketmq-consumer</module>
+        <module>rocketmq-provider</module>
     </modules>
 </project>
