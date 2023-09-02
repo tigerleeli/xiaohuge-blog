@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("provider")
-public class ProviderController {
+@RequestMapping("producer")
+public class ProducerController {
 
     @Resource
     private RocketMQTemplate rocketMQTemplate;

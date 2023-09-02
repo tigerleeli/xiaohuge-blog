@@ -29,6 +29,6 @@
         <module>sharding-jdbc-demo</module>
         <module>redisson-demo</module>
         <module>rocketmq-consumer</module>
-        <module>rocketmq-provider</module>
+        <module>rocketmq-producer</module>
     </modules>
 </project>
