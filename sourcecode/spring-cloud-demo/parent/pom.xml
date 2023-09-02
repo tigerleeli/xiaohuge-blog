@@ -31,6 +31,8 @@
 
         <snakeyaml.version>1.33</snakeyaml.version>
         <redisson-starter.version>3.16.8</redisson-starter.version>
+
+        <rocketmq-starter.version>2.2.2</rocketmq-starter.version>
     </properties>
 
     <dependencyManagement>
@@ -92,6 +94,12 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>${redisson-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
