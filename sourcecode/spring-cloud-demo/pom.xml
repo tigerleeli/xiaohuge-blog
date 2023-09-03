@@ -30,5 +30,9 @@
         <module>redisson-demo</module>
         <module>rocketmq-consumer</module>
         <module>rocketmq-producer</module>
+
+        <module>seata-order</module>
+        <module>seata-account</module>
+        <module>seata-storage</module>
     </modules>
 </project>
