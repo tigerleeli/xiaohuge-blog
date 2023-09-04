@@ -31,8 +31,9 @@
         <module>rocketmq-consumer</module>
         <module>rocketmq-producer</module>
 
-        <module>seata-order</module>
         <module>seata-account</module>
-        <module>seata-storage</module>
+        <module>seata-product</module>
+        <module>seata-order</module>
+        <module>seata-business</module>
     </modules>
 </project>

@@ -9,11 +9,11 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>seata-storage</artifactId>
+	<artifactId>seata-product</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
-	<name>seata-storage</name>
-	<description>seata-storage</description>
+	<name>seata-product</name>
+	<description>seata-product</description>
 
 	<dependencies>
 		<dependency>
@@ -37,5 +37,14 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+		</dependency>
 	</dependencies>
 </project>

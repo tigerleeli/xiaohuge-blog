@@ -1,4 +1,4 @@
-package com.example.seataorder;
+package com.example.seatabusiness;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableFeignClients()
 @SpringBootApplication
-public class SeataOrderApplication {
+public class SeataBusinessApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SeataOrderApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SeataBusinessApplication.class, args);
+    }
 
 }

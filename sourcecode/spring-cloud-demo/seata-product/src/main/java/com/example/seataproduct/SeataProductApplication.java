@@ -1,13 +1,13 @@
-package com.example.seatastorage;
+package com.example.seataproduct;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SeataStorageApplication {
+public class SeataProductApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SeataStorageApplication.class, args);
+		SpringApplication.run(SeataProductApplication.class, args);
 	}
 
 }

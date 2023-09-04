@@ -1,4 +1,4 @@
-package com.example.seataaccount.entity;
+package com.example.seataproduct.entity;
 
 import lombok.Data;
 
@@ -8,10 +8,10 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class Account {
+public class Product {
     @Id
     @GeneratedValue
     private Long id;
-    private String username;
-    private Integer money;
+    private String productName;
+    private Integer productNumber;
 }
