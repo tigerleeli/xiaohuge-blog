@@ -53,9 +53,32 @@ SpringBoot集成Redis、SpringBoot集成MongoDB、SpringBoot集成消息队列�
 开始学习[Spring Boot系列](/3.%20Spring%20Boot系列)
 
 ### 4）Spring Cloud系列 🎄🎄
-**未开始😭**
 
-开始学习[Spring Cloud系列](/4.%20Spring%20Cloud系列)
+**进行中...🤪** 
+
+Spring Cloud系列提供了一个完整的代码项目，建议将代码下载运行起来，边看代码边学习，岂不乐哉！
+
+`spring-cloud-demo`项目包括如下模块：
+
+├─config-demo  # nacos配置中心的代码示例
+├─consumer-service # 服务消费者，与provider-service配合
+├─gateway-service # 网关
+├─id-service # 分布式ID
+├─minio-service # 分布式文件的服务
+├─parent # 项目版本号管理模块，其它模块的父模块
+├─provider-service # 服务提供者，与consumer-service配合
+├─redisson-demo # 分布式锁的示例
+├─rocketmq-consumer # 消息队列的消费者，与rocketmq-producer配合
+├─rocketmq-producer # 消息队列的生产者，与rocketmq-consumer配置
+├─seata-account # 分布式事务案例的 账户服务
+├─seata-order # 分布式事务案例的 订单服务
+├─seata-storage # 分布式事务案例的 库存服务
+├─sentinel-demo # 服务降级限流示例
+├─sharding-jdbc-demo # 分库分表代码示例
+└─xxl-job-service # 分布式任务调度代码示例
+
+
+开始学习[Spring Cloud系列文章](/4.%20Spring%20Cloud系列)、[Spring Cloud系列代码](/sourcecode/spring-cloud-demo)
 
 
 ### 5）Java设计模式系列🌿🌿
