@@ -59,7 +59,7 @@ SpringBoot集成Redis、SpringBoot集成MongoDB、SpringBoot集成消息队列�
 Spring Cloud系列提供了一个完整的代码项目，建议将代码下载运行起来，边看代码边学习，岂不乐哉！
 
 `spring-cloud-demo`项目包括如下模块：
-
+```
 ├─config-demo  # nacos配置中心的代码示例
 ├─consumer-service # 服务消费者，与provider-service配合
 ├─gateway-service # 网关
@@ -76,7 +76,7 @@ Spring Cloud系列提供了一个完整的代码项目，建议将代码下载�
 ├─sentinel-demo # 服务降级限流示例
 ├─sharding-jdbc-demo # 分库分表代码示例
 └─xxl-job-service # 分布式任务调度代码示例
-
+```
 
 开始学习[Spring Cloud系列文章](/4.%20Spring%20Cloud系列)、[Spring Cloud系列代码](/sourcecode/spring-cloud-demo)
 
