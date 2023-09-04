@@ -1,4 +1,4 @@
-﻿package com.example.seataorder.remote;
+package com.example.seataorder.remote;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

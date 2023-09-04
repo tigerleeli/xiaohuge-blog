@@ -2,16 +2,16 @@ package com.example.seataorder.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity(name = "product_order")
 public class Order {
+
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Id
-    @GeneratedValue
     private Long id;
+
     private Long userId;
     private Long productId;
     private Integer purchaseNumber;
