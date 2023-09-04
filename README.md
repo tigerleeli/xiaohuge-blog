@@ -28,7 +28,7 @@
 
 这系列会包括认识二进制、计算组成原理、内存和CPU、函数调用机制、浮点数原理、汇编相关的知识。
 
-[计算机和编程原理系列](/1.%20计算机和编程底层原理系列)
+开始学习[计算机和编程原理系列](/1.%20计算机和编程底层原理系列)
 
 ### 2）Java基础系列 🍀🍀
 
@@ -36,6 +36,9 @@
 
 这个系列旨在帮助Java初学者建立起扎实的基础。将涵盖Java语言中的常用概念、语法、数据结构等内容。会包括JDK安装、基本数据类型、运算符、表达式、类和对象、
 数组、访问控制符、接口和抽象类、集合类、枚举、异常等基础知识，还会包括泛型、注解、多线程、锁、反射、Class类、Lambda表达式等Java高级知识。
+
+开始学习[Java基础系列](/2.%20Java基础系列)
+
 
 ### 3）Spring Boot系列🌳🌳
 
@@ -47,8 +50,13 @@
 本系列将包括从零开始创建SpringBoot项目、SpringBoot集成Mybatis、SpringBoot集成JPA、SpringBoot集成Mybatis-Plus、IOC原理、AOP原理，
 SpringBoot集成Redis、SpringBoot集成MongoDB、SpringBoot集成消息队列、ORM示例、SpringBoot集成任务调度、SpringBoot集成文件存储MinIO、自定义starter等内容。
 
+开始学习[Spring Boot系列](/3.%20Spring%20Boot系列)
+
 ### 4）Spring Cloud系列 🎄🎄
 **未开始😭**
+
+开始学习[Spring Cloud系列](/4.%20Spring%20Cloud系列)
+
 
 ### 5）Java设计模式系列🌿🌿
 **已完结😁**  
@@ -60,6 +68,8 @@ SpringBoot集成Redis、SpringBoot集成MongoDB、SpringBoot集成消息队列�
 - 构造型：构建者 、工厂方法 、抽象工厂、原型 、备忘录 ⚾
 - 操作型：模板方法 、状态 、策略 、命令 、解释器 🏀
 - 扩展性：装饰器、迭代器 、访问者 🥎
+
+开始学习[Spring Cloud系列](/5.%20Java设计模式系列)
 
 
 ![](/images/Common/wx.png)
