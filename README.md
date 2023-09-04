@@ -69,7 +69,7 @@ SpringBoot集成Redis、SpringBoot集成MongoDB、SpringBoot集成消息队列�
 - 操作型：模板方法 、状态 、策略 、命令 、解释器 🏀
 - 扩展性：装饰器、迭代器 、访问者 🥎
 
-开始学习[Spring Cloud系列](/5.%20Java设计模式系列)
+开始学习[Java设计模式系列](/5.%20Java设计模式系列)
 
 
 ![](/images/Common/wx.png)
