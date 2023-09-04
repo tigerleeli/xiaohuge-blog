@@ -1,6 +1,6 @@
 *如果遇到github图片不显示，推荐用gitee：[https://gitee.com/cunzaizhe/xiaohuge-blog](https://gitee.com/cunzaizhe/xiaohuge-blog)*
 
-## 1. 开头 ❤️❤️
+## 开头 ❤️❤️
 *为中华名族伟大复兴而编程🔥🔥，不做码农，只做工程师！*
 
 人类最大的浪费就是经验的浪费，人到了一定年纪就想把自己所学所用的知识分享出来，
@@ -10,16 +10,7 @@
 
 > 雷军说“人因梦想而伟大，又因坚持梦想而成长。” ，希望自己能坚持！
 
-## 2. 内容 🪴🪴
-目前拟定的文章系列包括：
-
-- 1. 计算机和编程底层原理系列
-- 2. Java基础系列
-- 3. Spring Boot系列
-- 4. Spring Cloud系列
-- 5. Java设计模式系列
-
-### 1）计算机和编程原理系列🌱🌱
+## 1）计算机和编程原理系列🌱🌱
 
 **进行中...🤪**
 
@@ -30,7 +21,7 @@
 
 开始学习[计算机和编程原理系列](/1.%20计算机和编程底层原理系列)
 
-### 2）Java基础系列 🍀🍀
+## 2）Java基础系列 🍀🍀
 
 **已完结😁**
 
@@ -40,7 +31,7 @@
 开始学习[Java基础系列](/2.%20Java基础系列)
 
 
-### 3）Spring Boot系列🌳🌳
+## 3）Spring Boot系列🌳🌳
 
 **进行中...🤪** 
 
@@ -52,7 +43,7 @@ SpringBoot集成Redis、SpringBoot集成MongoDB、SpringBoot集成消息队列�
 
 开始学习[Spring Boot系列](/3.%20Spring%20Boot系列)
 
-### 4）Spring Cloud系列 🎄🎄
+## 4）Spring Cloud系列 🎄🎄
 
 **进行中...🤪** 
 
@@ -81,7 +72,7 @@ Spring Cloud系列提供了一个完整的代码项目，建议将代码下载�
 开始学习[Spring Cloud系列文章](/4.%20Spring%20Cloud系列)、[Spring Cloud系列代码](/sourcecode/spring-cloud-demo)
 
 
-### 5）Java设计模式系列🌿🌿
+## 5）Java设计模式系列🌿🌿
 **已完结😁**  
 
 介绍Java语言中各种设计模式的系列文章。设计模式是一套被经过多年验证可用的、对于一类特定问题的可重用解决方案的总结。包括23种设计模式的使用场景介绍和完整的代码演示。
