@@ -15,7 +15,8 @@ public class BusinessController {
     private BusinessService businessService;
 
     @GetMapping("purchase")
-    public void purchase() {
+    public String purchase() {
         businessService.purchase();
+        return "操作成功";
     }
 }
