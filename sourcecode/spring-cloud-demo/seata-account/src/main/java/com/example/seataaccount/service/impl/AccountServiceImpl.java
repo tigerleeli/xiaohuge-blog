@@ -3,6 +3,8 @@ package com.example.seataaccount.service.impl;
 import com.example.seataaccount.entity.Account;
 import com.example.seataaccount.repository.AccountRepository;
 import com.example.seataaccount.service.AccountService;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
