@@ -35,5 +35,8 @@
         <module>seata-product</module>
         <module>seata-order</module>
         <module>seata-business</module>
+
+        <!-- 短信服务 -->
+        <module>sms-service</module>
     </modules>
 </project>
