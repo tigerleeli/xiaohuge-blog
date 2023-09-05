@@ -1,4 +1,4 @@
-﻿package com.example.smsservice.config;
+package com.example.smsservice.config;
 
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
@@ -11,8 +11,8 @@ public class SmsConfiguration {
     @Bean
     public IAcsClient iAcsClient() {
         DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou",
-                "LTAjVUwKznS*****",
-                "BNPO1zoNSi484oizGM9fzzwJJ*****");
+                "accessKeyId",
+                "secret");
         return new DefaultAcsClient(profile);
     }
 }

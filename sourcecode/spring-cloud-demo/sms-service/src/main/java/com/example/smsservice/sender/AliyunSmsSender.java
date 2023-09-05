@@ -1,4 +1,4 @@
-﻿package com.example.smsservice.sender;
+package com.example.smsservice.sender;
 
 import com.aliyuncs.IAcsClient;
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsRequest;
@@ -22,12 +22,12 @@ public class AliyunSmsSender implements SmsSender {
         // 您的验证码为：${code}，请勿泄露于他人！
         SendSmsRequest request = new SendSmsRequest();
         request.setPhoneNumbers(phone);
-        request.setSignName("sign_name"); // 签名名称
-        request.setTemplateCode("SMS_xxxxxxxxx"); // 短信模板
-        //  message = "{\"code\":\"1234\"}";
+        request.setSignName("xxxx"); // 签名名称
+        request.setTemplateCode("SMS_xxxxxxxx"); // 短信模板
         request.setTemplateParam(message);
         try {
             SendSmsResponse response = client.getAcsResponse(request);
+            log.info(response.getMessage());
             log.info(response.getRequestId());
         } catch (ServerException e) {
             e.printStackTrace();

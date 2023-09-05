@@ -1,6 +1,5 @@
-﻿package com.example.smsservice.factory;
+package com.example.smsservice.sender;
 
-import com.example.smsservice.sender.SmsSender;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

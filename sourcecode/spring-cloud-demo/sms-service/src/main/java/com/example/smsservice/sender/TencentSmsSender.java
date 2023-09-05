@@ -1,4 +1,4 @@
-﻿package com.example.smsservice.sender;
+package com.example.smsservice.sender;
 
 import org.springframework.stereotype.Component;
 
