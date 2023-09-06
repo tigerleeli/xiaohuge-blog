@@ -1,6 +1,6 @@
 *如果遇到github图片不显示，推荐用gitee：[https://gitee.com/cunzaizhe/xiaohuge-blog](https://gitee.com/cunzaizhe/xiaohuge-blog)*
 
-## 开始
+## 开始遇见
 
 ![](/images/Common/all.png)
 
