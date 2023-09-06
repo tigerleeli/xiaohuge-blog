@@ -27,6 +27,7 @@
         <module>config-demo</module>
         <module>sentinel-demo</module>
         <module>sharding-jdbc-demo</module>
+        <module>sharding-proxy-demo</module>
         <module>redisson-demo</module>
         <module>rocketmq-consumer</module>
         <module>rocketmq-producer</module>
