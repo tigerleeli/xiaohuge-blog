@@ -1,6 +1,14 @@
 *如果遇到github图片不显示，推荐用gitee：[https://gitee.com/cunzaizhe/xiaohuge-blog](https://gitee.com/cunzaizhe/xiaohuge-blog)*
 
-## 开头 ❤️❤️
+## 开始遇见
+
+![](/images/Common/all.png)
+
+无意得到葵花宝典武林秘籍一本，传说学完将天下无敌，乱花渐欲迷人眼，奈何终其一生都无法参悟，现赐予你。
+
+
+## 作者的话 ❤️❤️
+
 *为中华名族伟大复兴而编程🔥🔥，不做码农，只做工程师！*
 
 人类最大的浪费就是经验的浪费，人到了一定年纪就想把自己所学所用的知识分享出来，
