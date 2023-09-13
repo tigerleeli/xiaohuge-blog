@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("provider")
-@CrossOrigin
 public class ProviderController {
     @GetMapping("test")
     public String test(@RequestParam String name) {

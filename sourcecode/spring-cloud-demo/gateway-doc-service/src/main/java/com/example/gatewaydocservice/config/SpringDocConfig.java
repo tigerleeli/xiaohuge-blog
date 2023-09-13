@@ -6,9 +6,6 @@ import org.springframework.cloud.gateway.route.RouteDefinitionLocator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.reactive.CorsWebFilter;
-import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,21 +26,5 @@ public class SpringDocConfig {
             GroupedOpenApi.builder().pathsToMatch("/" + name + "/**").group(name).build();
         });
         return groups;
-    }
-
-    @Bean
-    public CorsWebFilter corsFilter() {
-        CorsConfiguration config = new CorsConfiguration();
-        // 设置允许跨域的域名
-        config.addAllowedOrigin("*");
-        // 设置允许跨域请求的方法
-        config.addAllowedMethod("*");
-        // 设置允许跨域请求头
-        config.addAllowedHeader("*");
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", config);
-
-        return new CorsWebFilter(source);
     }
 }
