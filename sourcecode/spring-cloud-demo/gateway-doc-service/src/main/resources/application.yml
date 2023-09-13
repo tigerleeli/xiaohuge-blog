@@ -1,0 +1,54 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: gateway-doc-service
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: http://localhost:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+      routes:
+        - id: consumer-service
+          uri: lb://consumer-service
+          predicates:
+            - Path=/consumer/**
+          filters:
+            - RewritePath=/consumer/(?<path>.*), /$\{path}
+        - id: provider-service
+          uri: lb://provider-service
+          predicates:
+            - Path=/provider/**
+          filters:
+            - RewritePath=/provider/(?<path>.*), /$\{path}
+        - id: openapi
+          uri: http://localhost:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+springdoc:
+  swagger-ui:
+    use-root-path: true
+    urls:
+      - name: provider
+        url: /v3/api-docs/provider
+      - name: consumer
+        url: /v3/api-docs/consumer
+  cache:
+    disabled: true

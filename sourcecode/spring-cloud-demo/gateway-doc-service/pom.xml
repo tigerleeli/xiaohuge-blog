@@ -9,18 +9,13 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>consumer-service</artifactId>
+    <artifactId>gateway-doc-service</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
-    <name>consumer-service</name>
-    <description>consumer-service</description>
+    <name>gateway-doc-service</name>
+    <description>gateway-doc-service</description>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -28,7 +23,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
         <dependency>
@@ -37,14 +32,9 @@
         </dependency>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-webflux-ui</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-webmvc-core</artifactId>
-            <version>${springdoc.version}</version>
-        </dependency>
     </dependencies>
 </project>
