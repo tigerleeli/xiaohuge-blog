@@ -33,8 +33,6 @@
         <redisson-starter.version>3.16.8</redisson-starter.version>
 
         <rocketmq-starter.version>2.2.2</rocketmq-starter.version>
-
-        <springdoc.version>1.6.10</springdoc.version>
     </properties>
 
     <dependencyManagement>
@@ -104,17 +102,6 @@
                 <version>${rocketmq-starter.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-webflux-ui</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-ui</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -41,6 +41,7 @@
         <module>sms-service</module>
 
         <!--聚合了文档的网关-->
-        <module>gateway-doc-service</module>
+        <module>knife4j-gateway</module>
+        <module>knife4j-user</module>
     </modules>
 </project>
