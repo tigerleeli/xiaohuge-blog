@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e30188-c580-40e3-a68a-143b3755c9e9" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/money-keep/money-keep/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/money-keep/money-keep/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4. Spring Cloud系列/00. Spring Cloud 微服务系列前言.md" beforeDir="false" afterPath="$PROJECT_DIR$/4. Spring Cloud系列/00. Spring Cloud 微服务系列前言.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +19,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": -1
+}]]></component>
   <component name="ProjectId" id="2Tf4HrLJeuaZHFF2jAVOp6zi0CJ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,7 +39,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -46,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1691420716926</updated>
       <workItem from="1691420718092" duration="523000" />
+      <workItem from="1695017705497" duration="13000" />
     </task>
     <servers />
   </component>
