@@ -43,5 +43,7 @@
         <!--聚合了文档的网关-->
         <module>knife4j-gateway</module>
         <module>knife4j-user</module>
+
+        <module>elasticsearch-demo</module>
     </modules>
 </project>
