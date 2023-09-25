@@ -45,5 +45,7 @@
         <module>knife4j-user</module>
 
         <module>elasticsearch-demo</module>
+
+        <module>i18n-demo</module>
     </modules>
 </project>
