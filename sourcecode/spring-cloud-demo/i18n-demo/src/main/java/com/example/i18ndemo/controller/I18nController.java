@@ -1,5 +1,6 @@
 package com.example.i18ndemo.controller;
 
+import com.example.i18ndemo.config.I18nUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +23,7 @@ public class I18nController {
 
     @GetMapping("welcome")
     public String welcome(@RequestParam String name) {
-        return messageSource.getMessage("msg_welcome", new String[]{name}, Locale.SIMPLIFIED_CHINESE);
+        return I18nUtils.getMessage("msg_welcome", new String[]{name});
     }
 
 
