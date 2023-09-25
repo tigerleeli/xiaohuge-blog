@@ -12,7 +12,7 @@ public class LocaleInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         String lang = request.getParameter("lang");
-        Locale locale = new Locale("zh", "CN");
+        Locale locale = Locale.SIMPLIFIED_CHINESE;
 
         if (lang != null && !lang.trim().isEmpty()) {
             String[] langParts = lang.split("_");
