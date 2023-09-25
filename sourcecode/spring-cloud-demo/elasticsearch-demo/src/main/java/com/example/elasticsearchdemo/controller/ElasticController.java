@@ -37,9 +37,9 @@ public class ElasticController {
     public Boolean initData() throws IOException {
         long startTime = System.currentTimeMillis();
 
-        // 模拟生成10万条数据
+        // 模拟生成100万条数据
         List<BulkOperation> bulkOperations = new ArrayList<>();
-        for (int i = 0; i < 10 * 10000; i++) {
+        for (int i = 0; i < 100 * 10000; i++) {
             Product product = new Product(String.valueOf(i), UUID.randomUUID().toString());
 
             bulkOperations.add(new BulkOperation.Builder()
