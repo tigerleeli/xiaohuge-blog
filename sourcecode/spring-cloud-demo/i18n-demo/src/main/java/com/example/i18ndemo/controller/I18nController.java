@@ -26,6 +26,11 @@ public class I18nController {
         return messageSource.getMessage("opr_fail", null, Locale.US);
     }
 
+    @GetMapping("test")
+    public String test(@RequestParam String name) {
+        return messageSource.getMessage("msg_welcome", new String[]{name}, Locale.TRADITIONAL_CHINESE);
+    }
+
     @GetMapping("welcome")
     public String welcome(@RequestParam String name) {
         return I18nUtils.getMessage("msg_welcome", new String[]{name});
