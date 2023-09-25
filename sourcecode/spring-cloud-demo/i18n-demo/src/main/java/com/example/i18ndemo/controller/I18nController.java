@@ -16,15 +16,19 @@ public class I18nController {
     @Autowired
     private MessageSource messageSource;
 
-    @GetMapping("opr")
-    public String welcome() {
-        return messageSource.getMessage("opr_success", null, Locale.US);
+    @GetMapping("success")
+    public String success() {
+        return messageSource.getMessage("opr_success", null, Locale.SIMPLIFIED_CHINESE);
+    }
+
+    @GetMapping("fail")
+    public String fail() {
+        return messageSource.getMessage("opr_fail", null, Locale.US);
     }
 
     @GetMapping("welcome")
     public String welcome(@RequestParam String name) {
         return I18nUtils.getMessage("msg_welcome", new String[]{name});
     }
-
 
 }
