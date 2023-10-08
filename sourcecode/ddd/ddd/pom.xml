@@ -16,6 +16,10 @@
     <description>ddd example</description>
 
     <modules>
+        <!-- 版本号模板 -->
         <module>parent</module>
+
+        <!-- 演示的代码模块 -->
+        <module>eg-module</module>
     </modules>
 </project>
