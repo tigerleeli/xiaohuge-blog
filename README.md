@@ -56,6 +56,8 @@ SpringBoot集成Redis、SpringBoot集成MongoDB、SpringBoot集成消息队列�
 
 Spring Cloud系列提供了一个完整的代码项目，建议将代码下载运行起来，边看代码边学习，岂不乐哉！
 
+![](/images/SpringCloud/architecture.png)
+
 `spring-cloud-demo`项目包括如下模块：
 ```
 ├─config-demo  # nacos配置中心的代码示例
